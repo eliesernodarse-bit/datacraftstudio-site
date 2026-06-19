@@ -6,10 +6,10 @@ permalink: /terms/
 
 # Terms of Service
 
-**App:** My Fitness Journey
-**Developer:** DataCraft Studio LLC
-**Contact:** datacraftstudiollc@gmail.com
-**Effective Date:** June 19, 2026
+**App:** My Fitness Journey  
+**Developer:** DataCraft Studio LLC  
+**Contact:** datacraftstudiollc@gmail.com  
+**Effective Date:** June 19, 2026  
 **Last Updated:** June 18, 2026
 
 ---
