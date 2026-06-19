@@ -7,4 +7,4 @@ title: DataCraft Studio
 
 We built *My Fitness Journey* for iOS.
 
-[Privacy Policy →](https://eliesernodarse-bit.github.io/datacraftstudio-site/privacy)
+[Privacy Policy](https://eliesernodarse-bit.github.io/datacraftstudio-site/privacy) · [Terms of Service](https://eliesernodarse-bit.github.io/datacraftstudio-site/terms)
