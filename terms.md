@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Terms of Service
-permalink: /terms/
 ---
 
 # Terms of Service
@@ -10,7 +9,7 @@ permalink: /terms/
 **Developer:** DataCraft Studio LLC  
 **Contact:** datacraftstudiollc@gmail.com  
 **Effective Date:** June 19, 2026  
-**Last Updated:** June 18, 2026
+**Last Updated:** June 18, 2026  
 
 ---
 
@@ -176,5 +175,5 @@ These Terms, together with the Privacy Policy, constitute the entire agreement b
 
 If you have questions about these Terms, please contact us:
 
-**DataCraft Studio LLC**
+**DataCraft Studio LLC**  
 datacraftstudiollc@gmail.com
