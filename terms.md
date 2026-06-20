@@ -65,9 +65,9 @@ The App is not designed for individuals with serious medical conditions without 
 
 ## 6. Third-Party API Services
 
-**Groq (AI Coach — built in):** The App uses Groq's API (Meta's Llama 3.3 model) as the default AI provider. When you use the AI Coach or workout split builder, your fitness context and prompt are sent directly from your device to Groq's servers. We are not a party to that transaction and do not have access to it. Your use of this feature is also governed by [Groq's Terms of Service](https://groq.com/terms-of-use/).
+**AI Coach (built in — via Firebase proxy):** When you use the AI Coach, Meal Planner, or Workout Split Builder, your fitness context and prompt are sent to our Firebase Cloud Function (hosted on Google Cloud), which forwards the request to Groq's API (Meta's Llama 3.3 model) and returns the response. We use this proxy solely to protect our API credentials and enforce a per-device rate limit. We do not store the content of your prompts or responses. Your use of the underlying Groq service is also governed by [Groq's Terms of Service](https://groq.com/terms-of-use/). Firebase is governed by [Google's Terms of Service](https://policies.google.com/terms).
 
-**Google Gemini (AI Coach — optional):** You may optionally connect your own Google Gemini API key via Settings → API Integrations. If provided, it takes precedence over the built-in Groq connection and your AI requests are sent to Google's servers instead. Your use is also governed by [Google's Terms of Service](https://policies.google.com/terms).
+**Google Gemini (AI Coach — optional):** You may optionally connect your own Google Gemini API key via Settings → API Integrations. If provided, it takes precedence over the built-in connection and your AI requests are sent directly from your device to Google's servers — bypassing our proxy entirely. Your use is also governed by [Google's Terms of Service](https://policies.google.com/terms).
 
 **USDA FoodData Central (Food Search):** This is an optional feature that requires you to provide your own USDA API key. If you use it:
 - You are solely responsible for obtaining, maintaining, and complying with the USDA's terms of service

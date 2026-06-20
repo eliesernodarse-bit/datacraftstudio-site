@@ -15,7 +15,9 @@ title: Privacy Policy
 
 ## Overview
 
-My Fitness Journey is a local-first fitness tracking app. Your health and fitness data — workouts, nutrition logs, biometrics, and goals — lives entirely on your device. We do not have a backend, we do not sync your data to any server, and we cannot access it.
+My Fitness Journey is a local-first fitness tracking app. Your health and fitness data — workouts, nutrition logs, biometrics, and goals — lives entirely on your device. We do not sync your fitness data to any server, and we cannot access it.
+
+The one exception is the AI Coach feature, which routes requests through our server as described below.
 
 ---
 
@@ -29,7 +31,8 @@ The following data is stored locally on your device using your phone's built-in 
 - **Goals** — target weight, body fat, and workout frequency
 - **User profile** — name, age, height, starting weight, sex, and activity level
 - **App settings** — theme preference, unit preferences, and accessibility settings
-- **API keys** — your USDA API key, if provided (stored securely; see below)
+- **API keys** — your Gemini or USDA API key, if provided (stored securely; see below)
+- **Device ID** — a randomly generated identifier stored in your device's secure enclave (iOS Keychain), used solely for AI rate limiting (see below)
 
 You can delete all of this data at any time via **Settings → Manage Data → Delete All Data**.
 
@@ -37,11 +40,21 @@ You can delete all of this data at any time via **Settings → Manage Data → D
 
 ---
 
+## AI Coach — How It Works
+
+When you use the AI Coach, Meal Planner, or Workout Split Builder, the app sends your fitness context (goals, recent workouts, nutrition summary) and your prompt to **our Firebase Cloud Function** (hosted on Google Cloud, region: us-central1). That server then forwards the request to **Groq's API** (Meta's Llama 3.3 model) and returns the response to your device.
+
+**What we store:** We store a per-device daily call count in Firebase Firestore to enforce a rate limit. This record contains only your anonymous device ID, the call count, and the date — never your fitness data or the content of your prompts.
+
+**What we do not store:** We do not log, store, or retain the content of your AI prompts or responses. The fitness context and your questions pass through our server transiently and are not persisted anywhere.
+
+**Your device ID:** A random UUID is generated the first time you use an AI feature and stored in your device's secure enclave (iOS Keychain). It is used only for rate limiting and cannot be linked to your identity.
+
+**Google Gemini (optional override):** You may add your own Google Gemini API key via **Settings → API Integrations**. If provided, AI requests bypass our server entirely and are sent directly from your device to Google's Gemini API. Your key is stored in your device's secure enclave and never transmitted to us. Your use is also governed by [Google's Privacy Policy](https://policies.google.com/privacy).
+
+---
+
 ## API Keys & Third-Party Services
-
-**AI Coach (Groq — built in):** The app uses Groq's API (Meta's Llama 3.3 model) as the default AI provider. When you use the AI Coach or workout split builder, your fitness context and prompt are sent directly from your device to **Groq's API** — we are not a middleman and do not store or see these requests. Your use is also governed by [Groq's Privacy Policy](https://groq.com/privacy-policy/).
-
-**AI Coach (Google Gemini — optional):** You may optionally add your own Google Gemini API key via **Settings → API Integrations**. If provided, it takes precedence over the built-in Groq connection. Your key is stored in your device's **secure enclave** (iOS Keychain via `expo-secure-store`) and is never transmitted to us. When active, your prompts are sent to Google's Gemini API instead of Groq. Your use is also governed by [Google's Privacy Policy](https://policies.google.com/privacy). You can delete your Gemini key at any time via **Settings → Manage Data → Delete All Data**, or individually via **Settings → API Integrations**.
 
 **Expanded Food Search (USDA FoodData Central):** This is an optional feature that requires you to provide your own USDA API key. If you provide one:
 - Your key is stored in your device's **secure enclave** (iOS Keychain via `expo-secure-store`) — not in plain text storage
@@ -56,15 +69,14 @@ You can delete your USDA key at any time via **Settings → Manage Data → Dele
 
 We do not sell, rent, or share your personal data with any third party for marketing or advertising purposes.
 
-The only external services this app communicates with are:
+The external services this app communicates with are:
 
 | Service | Purpose | Data Sent | Their Privacy Policy |
 |---|---|---|---|
-| Groq API | AI Coach + workout split builder *(built into the app)* | Your fitness context + your prompt | [Link](https://groq.com/privacy-policy/) |
-| Google Gemini API | AI Coach + workout split builder *(optional — only if you add your own key)* | Your fitness context + your prompt | [Link](https://policies.google.com/privacy) |
+| Firebase Cloud Functions (Google) | AI request proxy + rate limiting | Anonymous device ID, call count | [Link](https://firebase.google.com/support/privacy) |
+| Groq API | AI Coach responses (via our server) | Your fitness context + your prompt | [Link](https://groq.com/privacy-policy/) |
+| Google Gemini API | AI Coach responses *(optional — only if you add your own key)* | Your fitness context + your prompt | [Link](https://policies.google.com/privacy) |
 | USDA FoodData Central | Food search *(optional, requires your own key)* | Search query | [Link](https://www.usda.gov/privacy-policy) |
-
-The Groq AI integration is built into the app and does not require a key from you. Google Gemini is an optional override — only active if you add your own key in Settings. The USDA food search integration is optional and requires you to provide your own API key.
 
 ---
 
@@ -102,7 +114,7 @@ Since all health and fitness data is stored locally on your device, you have ful
 - **Export**: export a full JSON copy via **Settings → Manage Data → Export Data**
 - **Delete**: wipe everything via **Settings → Manage Data → Delete All Data**
 
-For questions about data processed by Groq (AI Coach requests), Google (Gemini API requests, if you've added your own key), or USDA (food search queries), contact those providers directly or refer to their respective privacy controls: [Groq](https://groq.com/privacy-policy/) · [Google](https://policies.google.com/privacy) · [USDA](https://www.usda.gov/privacy-policy).
+For questions about data processed by Groq (AI Coach requests), Google (Firebase + Gemini), or USDA (food search queries), contact those providers directly or refer to their respective privacy controls: [Firebase](https://firebase.google.com/support/privacy) · [Groq](https://groq.com/privacy-policy/) · [Google](https://policies.google.com/privacy) · [USDA](https://www.usda.gov/privacy-policy).
 
 ---
 
