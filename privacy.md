@@ -9,7 +9,7 @@ title: Privacy Policy
 **Developer:** DataCraft Studio LLC  
 **Contact:** datacraftstudiollc@gmail.com  
 **Effective Date:** June 19, 2026  
-**Last Updated:** June 18, 2026  
+**Last Updated:** June 20, 2026  
 
 ---
 
@@ -29,7 +29,7 @@ The following data is stored locally on your device using your phone's built-in 
 - **Goals** — target weight, body fat, and workout frequency
 - **User profile** — name, age, height, starting weight, sex, and activity level
 - **App settings** — theme preference, unit preferences, and accessibility settings
-- **API keys** — your Gemini and USDA API keys (stored securely; see below)
+- **API keys** — your USDA API key, if provided (stored securely; see below)
 
 You can delete all of this data at any time via **Settings → Manage Data → Delete All Data**.
 
@@ -37,16 +37,16 @@ You can delete all of this data at any time via **Settings → Manage Data → D
 
 ---
 
-## API Keys
+## API Keys & Third-Party Services
 
-If you choose to use the AI Coach or expanded food search features, you provide your own API keys for Google Gemini and the USDA FoodData Central database.
+**AI Coach (Google Gemini):** The app includes a built-in connection to Google's Gemini AI. When you use the AI Coach or workout split builder, your fitness context and prompt are sent directly from your device to **Google's Gemini API** — we are not a middleman and do not store or see these requests. Your use of this feature is also governed by [Google's Privacy Policy](https://policies.google.com/privacy).
 
-- These keys are stored in your device's **secure enclave** (iOS Keychain via `expo-secure-store`) — not in plain text storage
-- They are **never transmitted to us or our servers**
-- When you use the AI Coach, your prompt and fitness context are sent directly from your device to **Google's Gemini API** using your key — we are not a middleman and do not see these requests
-- When you use food search, queries are sent directly from your device to the **USDA FoodData Central API** using your key
+**Expanded Food Search (USDA FoodData Central):** This is an optional feature that requires you to provide your own USDA API key. If you provide one:
+- Your key is stored in your device's **secure enclave** (iOS Keychain via `expo-secure-store`) — not in plain text storage
+- It is **never transmitted to us or our servers**
+- Food search queries are sent directly from your device to the **USDA FoodData Central API** using your key
 
-You can delete both keys at any time via **Settings → Manage Data → Delete All Data**, or individually via **Settings → API Integrations**.
+You can delete your USDA key at any time via **Settings → Manage Data → Delete All Data**, or individually via **Settings → API Integrations**.
 
 ---
 
@@ -58,10 +58,10 @@ The only external services this app communicates with are:
 
 | Service | Purpose | Data Sent | Their Privacy Policy |
 |---|---|---|---|
-| Google Gemini API | AI Coach responses *(optional, requires your own key)* | Your fitness context + your prompt | [Link](https://policies.google.com/privacy) |
+| Google Gemini API | AI Coach + workout split builder *(built into the app)* | Your fitness context + your prompt | [Link](https://policies.google.com/privacy) |
 | USDA FoodData Central | Food search *(optional, requires your own key)* | Search query | [Link](https://www.usda.gov/privacy-policy) |
 
-The Gemini and USDA integrations are entirely optional and require you to provide your own API keys.
+The USDA food search integration is optional and requires you to provide your own API key. The Gemini AI integration is built into the app and does not require a key from you.
 
 ---
 
@@ -99,7 +99,7 @@ Since all health and fitness data is stored locally on your device, you have ful
 - **Export**: export a full JSON copy via **Settings → Manage Data → Export Data**
 - **Delete**: wipe everything via **Settings → Manage Data → Delete All Data**
 
-For questions about data processed by Google (Gemini API or USDA queries you initiate), you can contact Google directly or refer to their [privacy controls](https://policies.google.com/privacy).
+For questions about data processed by Google (Gemini API requests made by the app) or USDA (food search queries you initiate), you can contact those providers directly or refer to their respective privacy controls: [Google](https://policies.google.com/privacy) · [USDA](https://www.usda.gov/privacy-policy).
 
 ---
 

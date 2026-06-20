@@ -9,7 +9,7 @@ title: Terms of Service
 **Developer:** DataCraft Studio LLC  
 **Contact:** datacraftstudiollc@gmail.com  
 **Effective Date:** June 19, 2026  
-**Last Updated:** June 18, 2026  
+**Last Updated:** June 20, 2026  
 
 ---
 
@@ -23,7 +23,7 @@ These Terms constitute a legally binding agreement between you and DataCraft Stu
 
 ## 2. Description of the App
 
-My Fitness Journey is a personal fitness tracking application that allows you to log workouts, track nutrition, monitor biometrics, set fitness goals, and optionally interact with an AI-powered coaching feature using your own third-party API keys.
+My Fitness Journey is a personal fitness tracking application that allows you to log workouts, track nutrition, monitor biometrics, set fitness goals, and interact with a built-in AI-powered coaching feature.
 
 The App is designed for general fitness tracking and informational purposes only.
 
@@ -65,13 +65,14 @@ The App is not designed for individuals with serious medical conditions without 
 
 ## 6. Third-Party API Services
 
-The App includes optional features that require you to provide your own third-party API keys (currently Google Gemini and USDA FoodData Central).
+**Google Gemini (AI Coach):** The App includes a built-in connection to Google's Gemini AI. When you use the AI Coach or workout split builder, your fitness context and prompt are sent directly from your device to Google's servers. We are not a party to that transaction and do not have access to it. Your use of this feature is also governed by [Google's Terms of Service](https://policies.google.com/terms).
 
-- You are solely responsible for obtaining, maintaining, and complying with the terms of service of any third-party API you use
-- When you use these features, your data (including fitness context and food search queries) is sent directly from your device to the respective third-party service using your key — we are not a party to that transaction and have no access to it
-- We are not responsible for the availability, accuracy, content, or policies of any third-party service
-- Your use of Google Gemini is governed by [Google's Terms of Service](https://policies.google.com/terms)
-- Your use of the USDA FoodData Central API is governed by the [USDA's terms](https://www.usda.gov/policies-and-links)
+**USDA FoodData Central (Food Search):** This is an optional feature that requires you to provide your own USDA API key. If you use it:
+- You are solely responsible for obtaining, maintaining, and complying with the USDA's terms of service
+- Your food search queries are sent directly from your device to the USDA's servers using your key — we are not a party to that transaction and have no access to it
+- Your use is governed by the [USDA's terms](https://www.usda.gov/policies-and-links)
+
+We are not responsible for the availability, accuracy, content, or policies of any third-party service.
 
 ---
 
