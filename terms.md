@@ -65,7 +65,9 @@ The App is not designed for individuals with serious medical conditions without 
 
 ## 6. Third-Party API Services
 
-**Google Gemini (AI Coach):** The App includes a built-in connection to Google's Gemini AI. When you use the AI Coach or workout split builder, your fitness context and prompt are sent directly from your device to Google's servers. We are not a party to that transaction and do not have access to it. Your use of this feature is also governed by [Google's Terms of Service](https://policies.google.com/terms).
+**Groq (AI Coach — built in):** The App uses Groq's API (Meta's Llama 3.3 model) as the default AI provider. When you use the AI Coach or workout split builder, your fitness context and prompt are sent directly from your device to Groq's servers. We are not a party to that transaction and do not have access to it. Your use of this feature is also governed by [Groq's Terms of Service](https://groq.com/terms-of-use/).
+
+**Google Gemini (AI Coach — optional):** You may optionally connect your own Google Gemini API key via Settings → API Integrations. If provided, it takes precedence over the built-in Groq connection and your AI requests are sent to Google's servers instead. Your use is also governed by [Google's Terms of Service](https://policies.google.com/terms).
 
 **USDA FoodData Central (Food Search):** This is an optional feature that requires you to provide your own USDA API key. If you use it:
 - You are solely responsible for obtaining, maintaining, and complying with the USDA's terms of service
@@ -115,7 +117,7 @@ TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, DATACRAFT STUDIO LLC AND ITS 
 - LOSS OF PROFITS, REVENUE, DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES
 - PERSONAL INJURY OR PROPERTY DAMAGE ARISING FROM YOUR USE OF THE APP OR PARTICIPATION IN ANY EXERCISE PROGRAM
 - DAMAGES ARISING FROM UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR DATA
-- DAMAGES ARISING FROM THE CONDUCT OF THIRD-PARTY SERVICES (INCLUDING GOOGLE GEMINI OR USDA)
+- DAMAGES ARISING FROM THE CONDUCT OF THIRD-PARTY SERVICES (INCLUDING GROQ, GOOGLE GEMINI, OR USDA)
 
 IN NO EVENT SHALL OUR TOTAL LIABILITY TO YOU EXCEED THE AMOUNT YOU PAID FOR THE APP IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR $10 (USD), WHICHEVER IS GREATER.
 

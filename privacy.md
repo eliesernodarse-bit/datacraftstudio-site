@@ -39,7 +39,9 @@ You can delete all of this data at any time via **Settings → Manage Data → D
 
 ## API Keys & Third-Party Services
 
-**AI Coach (Google Gemini):** The app includes a built-in connection to Google's Gemini AI. When you use the AI Coach or workout split builder, your fitness context and prompt are sent directly from your device to **Google's Gemini API** — we are not a middleman and do not store or see these requests. Your use of this feature is also governed by [Google's Privacy Policy](https://policies.google.com/privacy).
+**AI Coach (Groq — built in):** The app uses Groq's API (Meta's Llama 3.3 model) as the default AI provider. When you use the AI Coach or workout split builder, your fitness context and prompt are sent directly from your device to **Groq's API** — we are not a middleman and do not store or see these requests. Your use is also governed by [Groq's Privacy Policy](https://groq.com/privacy-policy/).
+
+**AI Coach (Google Gemini — optional):** You may optionally add your own Google Gemini API key via **Settings → API Integrations**. If provided, it takes precedence over the built-in Groq connection. Your key is stored in your device's **secure enclave** (iOS Keychain via `expo-secure-store`) and is never transmitted to us. When active, your prompts are sent to Google's Gemini API instead of Groq. Your use is also governed by [Google's Privacy Policy](https://policies.google.com/privacy). You can delete your Gemini key at any time via **Settings → Manage Data → Delete All Data**, or individually via **Settings → API Integrations**.
 
 **Expanded Food Search (USDA FoodData Central):** This is an optional feature that requires you to provide your own USDA API key. If you provide one:
 - Your key is stored in your device's **secure enclave** (iOS Keychain via `expo-secure-store`) — not in plain text storage
@@ -58,10 +60,11 @@ The only external services this app communicates with are:
 
 | Service | Purpose | Data Sent | Their Privacy Policy |
 |---|---|---|---|
-| Google Gemini API | AI Coach + workout split builder *(built into the app)* | Your fitness context + your prompt | [Link](https://policies.google.com/privacy) |
+| Groq API | AI Coach + workout split builder *(built into the app)* | Your fitness context + your prompt | [Link](https://groq.com/privacy-policy/) |
+| Google Gemini API | AI Coach + workout split builder *(optional — only if you add your own key)* | Your fitness context + your prompt | [Link](https://policies.google.com/privacy) |
 | USDA FoodData Central | Food search *(optional, requires your own key)* | Search query | [Link](https://www.usda.gov/privacy-policy) |
 
-The USDA food search integration is optional and requires you to provide your own API key. The Gemini AI integration is built into the app and does not require a key from you.
+The Groq AI integration is built into the app and does not require a key from you. Google Gemini is an optional override — only active if you add your own key in Settings. The USDA food search integration is optional and requires you to provide your own API key.
 
 ---
 
@@ -99,7 +102,7 @@ Since all health and fitness data is stored locally on your device, you have ful
 - **Export**: export a full JSON copy via **Settings → Manage Data → Export Data**
 - **Delete**: wipe everything via **Settings → Manage Data → Delete All Data**
 
-For questions about data processed by Google (Gemini API requests made by the app) or USDA (food search queries you initiate), you can contact those providers directly or refer to their respective privacy controls: [Google](https://policies.google.com/privacy) · [USDA](https://www.usda.gov/privacy-policy).
+For questions about data processed by Groq (AI Coach requests), Google (Gemini API requests, if you've added your own key), or USDA (food search queries), contact those providers directly or refer to their respective privacy controls: [Groq](https://groq.com/privacy-policy/) · [Google](https://policies.google.com/privacy) · [USDA](https://www.usda.gov/privacy-policy).
 
 ---
 
