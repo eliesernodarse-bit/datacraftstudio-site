@@ -23,7 +23,7 @@ These Terms constitute a legally binding agreement between you and DataCraft Stu
 
 ## 2. Description of the App
 
-My Fitness Journey is a personal fitness tracking application that allows you to log workouts, track nutrition, monitor biometrics, set fitness goals, and interact with a built-in AI-powered coaching feature.
+My Fitness Journey is a personal fitness tracking application that allows you to log workouts, track nutrition, monitor biometrics, set fitness goals, and interact with an optional AI-powered coaching feature (requires your own Google Gemini API key).
 
 The App is designed for general fitness tracking and informational purposes only.
 
@@ -65,9 +65,7 @@ The App is not designed for individuals with serious medical conditions without 
 
 ## 6. Third-Party API Services
 
-**AI Coach (built in — via Firebase proxy):** When you use the AI Coach, Meal Planner, or Workout Split Builder, your fitness context and prompt are sent to our Firebase Cloud Function (hosted on Google Cloud), which forwards the request to Groq's API (Meta's Llama 3.3 model) and returns the response. We use this proxy solely to protect our API credentials and enforce a per-device rate limit. We do not store the content of your prompts or responses. Your use of the underlying Groq service is also governed by [Groq's Terms of Service](https://groq.com/terms-of-use/). Firebase is governed by [Google's Terms of Service](https://policies.google.com/terms).
-
-**Google Gemini (AI Coach — optional):** You may optionally connect your own Google Gemini API key via Settings → API Integrations. If provided, it takes precedence over the built-in connection and your AI requests are sent directly from your device to Google's servers — bypassing our proxy entirely. Your use is also governed by [Google's Terms of Service](https://policies.google.com/terms).
+**AI Coach (Google Gemini — your own key):** When you use the AI Coach, Meal Planner, or Workout Split Builder, your fitness context and prompt are sent **directly from your device** to Google's Gemini API (Gemini 2.5 Flash model) using the API key you provide in Settings → API Integrations. We do not have access to your prompts, responses, or API key. Your use is also governed by [Google's Terms of Service](https://policies.google.com/terms).
 
 **USDA FoodData Central (Food Search):** This is an optional feature that requires you to provide your own USDA API key. If you use it:
 - You are solely responsible for obtaining, maintaining, and complying with the USDA's terms of service
@@ -117,7 +115,7 @@ TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, DATACRAFT STUDIO LLC AND ITS 
 - LOSS OF PROFITS, REVENUE, DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES
 - PERSONAL INJURY OR PROPERTY DAMAGE ARISING FROM YOUR USE OF THE APP OR PARTICIPATION IN ANY EXERCISE PROGRAM
 - DAMAGES ARISING FROM UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR DATA
-- DAMAGES ARISING FROM THE CONDUCT OF THIRD-PARTY SERVICES (INCLUDING GROQ, GOOGLE GEMINI, OR USDA)
+- DAMAGES ARISING FROM THE CONDUCT OF THIRD-PARTY SERVICES (INCLUDING GOOGLE GEMINI, FIREBASE, OR USDA)
 
 IN NO EVENT SHALL OUR TOTAL LIABILITY TO YOU EXCEED THE AMOUNT YOU PAID FOR THE APP IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR $10 (USD), WHICHEVER IS GREATER.
 

@@ -17,8 +17,6 @@ title: Privacy Policy
 
 My Fitness Journey is a local-first fitness tracking app. Your health and fitness data — workouts, nutrition logs, biometrics, and goals — lives entirely on your device. We do not sync your fitness data to any server, and we cannot access it.
 
-The one exception is the AI Coach feature, which routes requests through our server as described below.
-
 ---
 
 ## Data Stored On Your Device
@@ -32,7 +30,6 @@ The following data is stored locally on your device using your phone's built-in 
 - **User profile** — name, age, height, starting weight, sex, and activity level
 - **App settings** — theme preference, unit preferences, and accessibility settings
 - **API keys** — your Gemini or USDA API key, if provided (stored securely; see below)
-- **Device ID** — a randomly generated identifier stored in your device's secure enclave (iOS Keychain), used solely for AI rate limiting (see below)
 
 You can delete all of this data at any time via **Settings → Manage Data → Delete All Data**.
 
@@ -42,15 +39,11 @@ You can delete all of this data at any time via **Settings → Manage Data → D
 
 ## AI Coach — How It Works
 
-When you use the AI Coach, Meal Planner, or Workout Split Builder, the app sends your fitness context (goals, recent workouts, nutrition summary) and your prompt to **our Firebase Cloud Function** (hosted on Google Cloud, region: us-central1). That server then forwards the request to **Groq's API** (Meta's Llama 3.3 model) and returns the response to your device.
+When you use the AI Coach, Meal Planner, or Workout Split Builder, the app sends your fitness context (goals, recent workouts, nutrition summary) and your prompt **directly from your device to Google's Gemini API** (Gemini 2.5 Flash model) using your own API key. No data passes through our servers.
 
-**What we store:** We store a per-device daily call count in Firebase Firestore to enforce a rate limit. This record contains only your anonymous device ID, the call count, and the date — never your fitness data or the content of your prompts.
+**What we store:** Nothing. AI requests go directly from your device to Google. We have no visibility into your prompts or responses.
 
-**What we do not store:** We do not log, store, or retain the content of your AI prompts or responses. The fitness context and your questions pass through our server transiently and are not persisted anywhere.
-
-**Your device ID:** A random UUID is generated the first time you use an AI feature and stored in your device's secure enclave (iOS Keychain). It is used only for rate limiting and cannot be linked to your identity.
-
-**Google Gemini (optional override):** You may add your own Google Gemini API key via **Settings → API Integrations**. If provided, AI requests bypass our server entirely and are sent directly from your device to Google's Gemini API. Your key is stored in your device's secure enclave and never transmitted to us. Your use is also governed by [Google's Privacy Policy](https://policies.google.com/privacy).
+**Your Gemini API key:** You provide your own key via **Settings → API Integrations**. It is stored in your device's secure enclave (iOS Keychain via `expo-secure-store`) and is never transmitted to us. Your use of the Gemini API is governed by [Google's Privacy Policy](https://policies.google.com/privacy).
 
 ---
 
@@ -73,9 +66,7 @@ The external services this app communicates with are:
 
 | Service | Purpose | Data Sent | Their Privacy Policy |
 |---|---|---|---|
-| Firebase Cloud Functions (Google) | AI request proxy + rate limiting | Anonymous device ID, call count | [Link](https://firebase.google.com/support/privacy) |
-| Groq API | AI Coach responses (via our server) | Your fitness context + your prompt | [Link](https://groq.com/privacy-policy/) |
-| Google Gemini API | AI Coach responses *(optional — only if you add your own key)* | Your fitness context + your prompt | [Link](https://policies.google.com/privacy) |
+| Google Gemini API | AI Coach responses *(requires your own key)* | Your fitness context + your prompt | [Link](https://policies.google.com/privacy) |
 | USDA FoodData Central | Food search *(optional, requires your own key)* | Search query | [Link](https://www.usda.gov/privacy-policy) |
 
 ---
@@ -114,7 +105,7 @@ Since all health and fitness data is stored locally on your device, you have ful
 - **Export**: export a full JSON copy via **Settings → Manage Data → Export Data**
 - **Delete**: wipe everything via **Settings → Manage Data → Delete All Data**
 
-For questions about data processed by Groq (AI Coach requests), Google (Firebase + Gemini), or USDA (food search queries), contact those providers directly or refer to their respective privacy controls: [Firebase](https://firebase.google.com/support/privacy) · [Groq](https://groq.com/privacy-policy/) · [Google](https://policies.google.com/privacy) · [USDA](https://www.usda.gov/privacy-policy).
+For questions about data processed by Google (Gemini AI Coach requests) or USDA (food search queries), contact those providers directly or refer to their respective privacy controls: [Google](https://policies.google.com/privacy) · [USDA](https://www.usda.gov/privacy-policy).
 
 ---
 
