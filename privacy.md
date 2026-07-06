@@ -52,7 +52,7 @@ support@datacraftllc.com
 
 ## My Fitness Journey
 
-My Fitness Journey is a local-first fitness tracking app. Your health and fitness data — workouts, nutrition logs, biometrics, and goals — lives entirely on your device. My Fitness Journey does not currently require an account, has no cloud sync, and DataCraft Studio LLC does not receive, collect, or store your fitness data on any server.
+My Fitness Journey is a fitness tracking app. Your health and fitness data — workouts, nutrition logs, biometrics, and goals — lives entirely on your device and is never uploaded to any server. My Fitness Journey does require a DataCraft Studio account (see General above) — used only to keep your **Fit Points** balance (spent on AI Coach questions, Meal Plans, and Workout Splits) safe across devices; it has no bearing on your fitness data, which stays local either way.
 
 **Data stored on your device** (AsyncStorage, and secure device storage for sensitive items — never transmitted to DataCraft Studio LLC, and only ever sent to a third-party service if you actively use an optional feature with your own API key):
 
@@ -74,12 +74,16 @@ You can delete all of this data at any time via **Settings → Manage Data → D
 
 **Food Search (USDA FoodData Central):** Optional, requires your own USDA API key in **Settings → API Integrations**, stored the same way as your Gemini key. Search queries go directly from your device to the USDA's API using your key; we have no visibility into them. Governed by the [USDA's privacy policy](https://www.usda.gov/privacy-policy). Delete your key anytime via **Settings → API Integrations** or **Settings → Manage Data → Delete All Data**.
 
+**Fit Points:** a points balance used to pay for AI Coach questions, Meal Plans, and Workout Splits, stored in Cloud Firestore against your account — server-managed, never directly editable by the app. Deleting your account (**Profile → Delete Account**) permanently deletes your Fit Points balance; this is separate from **Delete All Data**, which only clears locally stored fitness data and leaves your account and Fit Points untouched.
+
+**Your Rights:** since all fitness data is stored locally, you have full control over it — **Access** it anytime in the app, **Export** a full JSON copy via **Settings → Manage Data → Export Data**, or **Delete** it via **Settings → Manage Data → Delete All Data**. Your account and Fit Points balance are deleted separately, via **Profile → Delete Account**.
+
 | Service | Purpose | Data Sent | Their Privacy Policy |
 |---|---|---|---|
+| Firebase Authentication | Account sign-in | Email, password (handled by Firebase) | [Link](https://policies.google.com/privacy) |
+| Cloud Firestore | Storing your Fit Points balance | Points balance | [Link](https://policies.google.com/privacy) |
 | Google Gemini API | AI Coach, Meal Planner, Workout Split Builder *(your own key)* | App context + your prompt | [Link](https://policies.google.com/privacy) |
 | USDA FoodData Central | Food search *(optional, your own key)* | Search query | [Link](https://www.usda.gov/privacy-policy) |
-
-**Your Rights:** since all data is stored locally, you have full control — **Access** it anytime in the app, **Export** a full JSON copy via **Settings → Manage Data → Export Data**, or **Delete** everything via **Settings → Manage Data → Delete All Data**.
 
 ---
 

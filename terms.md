@@ -73,7 +73,7 @@ support@datacraftllc.com
 
 ## My Fitness Journey
 
-**Description:** My Fitness Journey is a personal fitness tracking application — log workouts, track nutrition, monitor biometrics, set goals, and optionally use AI-powered features (AI Coach, Meal Planner, Workout Split Builder — each requires your own Google Gemini API key). The App is local-first: your data is stored on your device, with no account required and no cloud sync.
+**Description:** My Fitness Journey is a personal fitness tracking application — log workouts, track nutrition, monitor biometrics, set goals, and optionally use AI-powered features (AI Coach, Meal Planner, Workout Split Builder — each requires your own Google Gemini API key). Your fitness data is stored on your device, never uploaded to any server. The App does require a DataCraft Studio account (see General → Section 2) to keep your **Fit Points** balance — spent on AI Coach questions, Meal Plans, and Workout Splits — safe across devices.
 
 **Not Medical Advice.** THE APP IS NOT A MEDICAL DEVICE AND DOES NOT PROVIDE MEDICAL ADVICE. Workout logs, nutrition tracking, calorie/macro estimates, biometric monitoring, goal recommendations, and AI coaching responses are for **general informational and fitness tracking purposes only** and are not a substitute for professional medical advice, diagnosis, or treatment.
 
@@ -86,9 +86,11 @@ support@datacraftllc.com
 
 **Third-Party API Services.** When you use AI Coach, Meal Planner, or Workout Split Builder, your context and prompt are sent directly from your device to Google's Gemini API using your own key — we have no access to your prompts, responses, or key; you're responsible for complying with Google's terms, and your use is governed by [Google's Terms of Service](https://policies.google.com/terms). The Food Search feature works the same way with your own USDA FoodData Central key, governed by the [USDA's terms](https://www.usda.gov/policies-and-links). We're not responsible for outages, rate limits, or content from either provider.
 
+**Fit Points.** AI Coach questions, Meal Plans, and Workout Splits each consume Fit Points from a server-managed balance tied to your account; manual logging (workouts, nutrition, biometrics) never costs points. Points may be purchased as in-app packages. Fit Points have no cash value, are non-transferable, and are not redeemable for cash.
+
 **Eligibility Note.** The App is not designed for individuals with serious medical conditions without prior written clearance from a qualified healthcare provider.
 
-**Local-Only Termination Note.** Because the App is local-first and requires no account or server connection, DataCraft Studio LLC cannot remotely disable your access to locally stored data. We may still discontinue or restrict any future online, paid, or third-party-connected feature for conduct that violates these Terms.
+**Account Deletion.** Deleting your account (**Profile → Delete Account**) permanently deletes your account and Fit Points balance — this can't be undone, and any remaining balance is forfeited. Your locally stored fitness data (workouts, nutrition, biometrics) is untouched by account deletion; use **Delete All Data** to clear that separately. Because your fitness data itself is local-first, DataCraft Studio LLC cannot remotely disable your access to it regardless of your account's status.
 
 ---
 
