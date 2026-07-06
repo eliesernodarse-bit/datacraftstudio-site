@@ -5,190 +5,99 @@ title: Terms of Service
 
 # Terms of Service
 
-**App:** My Fitness Journey  
 **Developer:** DataCraft Studio LLC  
 **Contact:** support@datacraftllc.com  
 **Effective Date:** June 19, 2026  
-**Last Updated:** June 23, 2026
+**Last Updated:** July 6, 2026
 
 ---
 
-## 1. Acceptance of Terms
-
-By downloading, installing, or using My Fitness Journey (the "App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.
-
-These Terms constitute a legally binding agreement between you and DataCraft Studio LLC ("we," "us," or "our"). Your continued use of the App following any updates to these Terms constitutes acceptance of the revised Terms.
+These Terms of Service cover every app published by DataCraft Studio LLC — currently **My Fitness Journey** and **trvlr** — and apply automatically to any app we publish in the future. The **General** section below applies to all of our apps. Each app then has its own section covering anything specific to that app.
 
 ---
 
-## 2. Description of the App
+## General — All Apps
 
-My Fitness Journey is a personal fitness tracking application that allows you to log workouts, track nutrition, monitor biometrics, set fitness goals, and interact with optional AI-powered features (AI Coach, Meal Planner, and Workout Split Builder — each requires your own Google Gemini API key).
+### 1. Acceptance of Terms
 
-The App is local-first: your data is stored on your device. There is no account system, no cloud sync, and no backend operated by DataCraft Studio LLC that stores your fitness data.
+By downloading, installing, or using any app published by DataCraft Studio LLC ("we," "us," or "our," and each, an "App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree, do not use the App. Your continued use of any App after an update to these Terms constitutes acceptance of the revised Terms.
 
-The App is designed for general fitness tracking and informational purposes only.
+### 2. Accounts
 
----
+Some of our Apps (currently trvlr) require creating an account via Firebase Authentication. That one account works across every current and future DataCraft Studio app — you're responsible for maintaining the confidentiality of your account credentials and for all activity under your account. You may delete your account at any time from within any App that uses it; this permanently deletes the account and all app-specific data tied to it (see each App's section below).
 
-## 3. Not Medical Advice
+Apps that don't currently require an account (see My Fitness Journey below) have no account system at all — there is nothing to create, and nothing tied to an account to delete.
 
-**THE APP IS NOT A MEDICAL DEVICE AND DOES NOT PROVIDE MEDICAL ADVICE.**
+### 3. Eligibility
 
-The information, content, and features provided by the App — including workout logs, nutrition tracking, calorie estimates, macro targets, biometric monitoring, goal recommendations, and AI coaching responses — are for **general informational and fitness tracking purposes only**. They are not intended to be a substitute for professional medical advice, diagnosis, or treatment. The App does not diagnose, treat, cure, or prevent any disease or medical condition.
+Our Apps are intended for users who are 13 years of age or older. By using an App, you represent that you are at least 13. If you are under 18, you represent that your parent or legal guardian has reviewed and agreed to these Terms.
 
-- Always seek the advice of a qualified healthcare provider before beginning any new exercise program, diet, or nutrition plan
-- Never disregard professional medical advice or delay seeking it because of something you read or received through the App
-- If you experience pain, discomfort, dizziness, shortness of breath, or any other symptoms during exercise, stop immediately and consult a healthcare professional
-- The AI Coach feature provides general fitness and nutrition guidance only and is not a licensed medical professional, dietitian, or personal trainer
-- AI-generated responses may be inaccurate, incomplete, or not appropriate for your individual circumstances. You are responsible for determining whether any AI-generated workout plan, meal plan, or nutritional guidance is appropriate for you
+### 4. Intellectual Property
 
-We expressly disclaim any responsibility for any adverse effects resulting from the use of information or features provided by the App.
+Each App, including its design, code, graphics, and content, is owned by DataCraft Studio LLC and protected by applicable copyright, trademark, and other intellectual property laws. You are granted a limited, non-exclusive, non-transferable, revocable license to use each App for personal, non-commercial purposes. You may not copy, modify, distribute, sell, or sublicense any App or part of it; reverse engineer, decompile, or disassemble it; use it to build a competing product; or remove any proprietary notices.
 
----
+### 5. Privacy
 
-## 4. Assumption of Risk
+Your use of any App is also governed by our [Privacy Policy](https://datacraftstudiollc.com/privacy), which is incorporated into these Terms by reference.
 
-Physical exercise involves inherent risks, including but not limited to muscle strain, injury, or in rare cases, serious physical harm. By using the App, you acknowledge and accept these risks and agree that you are voluntarily participating in physical activity at your own risk.
+### 6. Third-Party Services (General)
 
-You are solely responsible for:
-- Assessing your own physical fitness and health before undertaking any exercise program suggested or tracked through the App
-- Consulting a qualified healthcare professional before starting any exercise or nutrition program, particularly if you have a pre-existing medical condition
-- Using safe and appropriate form and technique during all exercises
+Where an App uses a third-party service (e.g., Google Gemini, USDA FoodData Central, Firebase), we are not responsible for the availability, accuracy, content, or policies of that service, and your use of it is governed by that provider's own terms. See each App's section below for which services it uses and how.
 
----
+### 7. Disclaimer of Warranties
 
-## 5. Eligibility
+EACH APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR THAT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF HARMFUL COMPONENTS. WE DO NOT WARRANT THAT ANY APP WILL MEET YOUR SPECIFIC REQUIREMENTS OR THAT ANY ERRORS WILL BE CORRECTED.
 
-The App is intended for users who are 13 years of age or older. By using the App, you represent that you are at least 13 years old. If you are under 18, you represent that your parent or legal guardian has reviewed and agreed to these Terms.
+### 8. Limitation of Liability
 
-The App is not designed for individuals with serious medical conditions without prior written clearance from a qualified healthcare provider.
+TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, DATACRAFT STUDIO LLC AND ITS MEMBERS, OFFICERS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES; LOSS OF PROFITS, REVENUE, DATA, OR GOODWILL; DAMAGES ARISING FROM UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR DATA; OR DAMAGES ARISING FROM THE CONDUCT OF ANY THIRD-PARTY SERVICE. IN NO EVENT SHALL OUR TOTAL LIABILITY TO YOU ACROSS ALL APPS EXCEED THE AMOUNT YOU PAID US IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR $10 (USD), WHICHEVER IS GREATER. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES, SO THE ABOVE MAY NOT APPLY TO YOU IN FULL.
 
----
+### 9. Indemnification
 
-## 6. Third-Party API Services
+You agree to indemnify, defend, and hold harmless DataCraft Studio LLC and its members, officers, employees, and agents from any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising from your use of any App, your violation of these Terms or any third party's rights, or your use of any third-party service through an App.
 
-**AI Features (Google Gemini — your own key):** When you use the AI Coach, Meal Planner, or Workout Split Builder, your fitness context and prompt are sent **directly from your device** to Google's Gemini API using the API key you provide in Settings → API Integrations. DataCraft Studio LLC does not have access to your prompts, responses, or API key.
+### 10. Modifications, Termination, and Governing Law
 
-- You are solely responsible for obtaining, maintaining, and complying with Google's terms of service for your Gemini API key
-- AI-generated responses may be inaccurate, incomplete, or unsuitable for your specific situation. Use your own judgment before acting on any AI output
-- Do not enter sensitive medical information into AI features
-- DataCraft Studio LLC is not responsible for outages, rate limits, pricing changes, policy changes, or the content of responses from Google Gemini
-- Your use is also governed by [Google's Terms of Service](https://policies.google.com/terms)
+We may modify, suspend, or discontinue any App (or part of it) at any time without notice, and are not liable for any such change. We may update these Terms from time to time; we'll update the "Last Updated" date above and make reasonable efforts to notify you in-app for material changes. These Terms remain in effect while you use an App; you may stop using it at any time, and (where applicable) delete your account per Section 2 above.
 
-**USDA FoodData Central (Food Search):** This is an optional feature that requires you to provide your own USDA API key. If you use it:
-- You are solely responsible for obtaining, maintaining, and complying with the USDA's terms of service
-- Your food search queries are sent directly from your device to the USDA's servers using your key — DataCraft Studio LLC is not a party to that transaction and has no access to it
-- DataCraft Studio LLC is not responsible for outages, rate limits, pricing changes, policy changes, or the accuracy of food data returned by the USDA
-- Your use is governed by the [USDA's terms](https://www.usda.gov/policies-and-links)
+These Terms are governed by the laws of the State of Florida, without regard to conflict-of-law principles. Disputes shall first be attempted through good-faith negotiation; if that fails, through binding arbitration under the American Arbitration Association's rules, conducted in Florida. You waive any right to a class action or class-wide arbitration. Either party may still seek injunctive or equitable relief from a court of competent jurisdiction.
 
-We are not responsible for the availability, accuracy, content, or policies of any third-party service.
+If any provision of these Terms is found unenforceable, it will be limited or eliminated to the minimum extent necessary, and the rest remain in force. These Terms, together with our Privacy Policy, constitute the entire agreement between you and DataCraft Studio LLC regarding each App.
 
----
-
-## 7. Intellectual Property
-
-The App, including its design, code, graphics, and content, is owned by DataCraft Studio LLC and is protected by applicable copyright, trademark, and other intellectual property laws.
-
-You are granted a limited, non-exclusive, non-transferable, revocable license to use the App for your personal, non-commercial purposes. You may not:
-
-- Copy, modify, distribute, sell, or sublicense the App or any part of it
-- Reverse engineer, decompile, or disassemble the App
-- Use the App to build a competing product or service
-- Remove or alter any proprietary notices on the App
-
----
-
-## 8. Privacy
-
-Your use of the App is also governed by our [Privacy Policy](https://datacraftstudiollc.com/privacy.html), which is incorporated into these Terms by reference. All fitness and health data you enter is stored locally on your device and is never transmitted to DataCraft Studio LLC.
-
----
-
-## 9. Disclaimer of Warranties
-
-THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:
-
-- WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE
-- WARRANTIES THAT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS
-- WARRANTIES REGARDING THE ACCURACY, RELIABILITY, OR COMPLETENESS OF ANY CONTENT OR RESULTS, INCLUDING AI-GENERATED CONTENT
-
-WE DO NOT WARRANT THAT THE APP WILL MEET YOUR SPECIFIC REQUIREMENTS OR THAT ANY ERRORS WILL BE CORRECTED. WE DO NOT GUARANTEE ANY SPECIFIC FITNESS, WEIGHT LOSS, OR HEALTH OUTCOMES FROM USING THE APP.
-
----
-
-## 10. Limitation of Liability
-
-TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, DATACRAFT STUDIO LLC AND ITS MEMBERS, OFFICERS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY:
-
-- INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES
-- LOSS OF PROFITS, REVENUE, DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES
-- PERSONAL INJURY OR PROPERTY DAMAGE ARISING FROM YOUR USE OF THE APP OR PARTICIPATION IN ANY EXERCISE PROGRAM
-- DAMAGES ARISING FROM UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR DATA
-- DAMAGES ARISING FROM THE CONDUCT OF THIRD-PARTY SERVICES (INCLUDING GOOGLE GEMINI OR USDA FOODDATA CENTRAL)
-- LOSS OF LOCALLY STORED DATA DUE TO DEVICE LOSS, APP DELETION, OR FAILURE OF DEVICE BACKUP SYSTEMS
-
-IN NO EVENT SHALL OUR TOTAL LIABILITY TO YOU EXCEED THE AMOUNT YOU PAID FOR THE APP IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR $10 (USD), WHICHEVER IS GREATER.
-
-SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES, SO THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU IN FULL.
-
----
-
-## 11. Indemnification
-
-You agree to indemnify, defend, and hold harmless DataCraft Studio LLC and its members, officers, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in any way connected with:
-
-- Your use of the App
-- Your violation of these Terms
-- Your violation of any rights of a third party
-- Any injury or harm resulting from physical activity you undertake based on information from the App
-- Your use of third-party API services (including Google Gemini and USDA FoodData Central)
-
----
-
-## 12. Modifications to the App and Terms
-
-We reserve the right to modify, suspend, or discontinue the App (or any part of it) at any time without notice. We are not liable to you or any third party for any such modification, suspension, or discontinuation.
-
-We may update these Terms from time to time. We will indicate the updated date at the top of this page. Your continued use of the App after any changes constitutes acceptance of the new Terms. For material changes, we will make reasonable efforts to notify you within the App.
-
----
-
-## 13. Termination
-
-These Terms remain in effect while you use the App. You may stop using the App at any time.
-
-Because the App is local-first and does not require an account or server connection, DataCraft Studio LLC cannot remotely disable your access to locally stored data. However, we may discontinue, modify, or restrict access to features where technically possible — including any future online, paid, or third-party-connected features — for conduct that we believe violates these Terms or is harmful to others.
-
-Upon any such restriction, licenses granted to you under these Terms with respect to those features will immediately terminate.
-
----
-
-## 14. Governing Law and Dispute Resolution
-
-These Terms are governed by and construed in accordance with the laws of the State of Florida, without regard to its conflict of law principles.
-
-Any dispute arising out of or relating to these Terms or the App shall first be attempted to be resolved through good-faith negotiation. If negotiation fails, disputes shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association, conducted in Florida. You waive any right to participate in a class action lawsuit or class-wide arbitration.
-
-Nothing in this section prevents either party from seeking injunctive or other equitable relief from a court of competent jurisdiction.
-
----
-
-## 15. Severability
-
-If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary, and the remaining provisions will remain in full force and effect.
-
----
-
-## 16. Entire Agreement
-
-These Terms, together with the Privacy Policy, constitute the entire agreement between you and DataCraft Studio LLC regarding the App and supersede all prior agreements or understandings.
-
----
-
-## 17. Contact
-
-If you have questions about these Terms, please contact us:
+### Contact
 
 **DataCraft Studio LLC**  
 support@datacraftllc.com
+
+---
+
+## My Fitness Journey
+
+**Description:** My Fitness Journey is a personal fitness tracking application — log workouts, track nutrition, monitor biometrics, set goals, and optionally use AI-powered features (AI Coach, Meal Planner, Workout Split Builder — each requires your own Google Gemini API key). The App is local-first: your data is stored on your device, with no account required and no cloud sync.
+
+**Not Medical Advice.** THE APP IS NOT A MEDICAL DEVICE AND DOES NOT PROVIDE MEDICAL ADVICE. Workout logs, nutrition tracking, calorie/macro estimates, biometric monitoring, goal recommendations, and AI coaching responses are for **general informational and fitness tracking purposes only** and are not a substitute for professional medical advice, diagnosis, or treatment.
+
+- Always consult a qualified healthcare provider before beginning any new exercise program, diet, or nutrition plan
+- Never disregard or delay seeking professional medical advice because of something in the App
+- Stop immediately and consult a healthcare professional if you experience pain, discomfort, dizziness, or shortness of breath during exercise
+- The AI Coach is not a licensed medical professional, dietitian, or personal trainer, and its responses may be inaccurate or inappropriate for your circumstances — you are responsible for judging their suitability
+
+**Assumption of Risk.** Physical exercise involves inherent risks, including muscle strain, injury, or serious harm. By using the App, you acknowledge and accept these risks. You are solely responsible for assessing your own fitness/health before undertaking any suggested exercise program, consulting a healthcare professional where appropriate, and using safe form and technique.
+
+**Third-Party API Services.** When you use AI Coach, Meal Planner, or Workout Split Builder, your context and prompt are sent directly from your device to Google's Gemini API using your own key — we have no access to your prompts, responses, or key; you're responsible for complying with Google's terms, and your use is governed by [Google's Terms of Service](https://policies.google.com/terms). The Food Search feature works the same way with your own USDA FoodData Central key, governed by the [USDA's terms](https://www.usda.gov/policies-and-links). We're not responsible for outages, rate limits, or content from either provider.
+
+**Eligibility Note.** The App is not designed for individuals with serious medical conditions without prior written clearance from a qualified healthcare provider.
+
+**Local-Only Termination Note.** Because the App is local-first and requires no account or server connection, DataCraft Studio LLC cannot remotely disable your access to locally stored data. We may still discontinue or restrict any future online, paid, or third-party-connected feature for conduct that violates these Terms.
+
+---
+
+## trvlr
+
+**Description:** trvlr is an AI-assisted trip planning app — build day-by-day itineraries, browse them on a map, and refine them with AI. Unlike My Fitness Journey, trvlr requires a DataCraft Studio account (see General → Section 2) to keep your Travel Points balance safe across devices and, optionally, sync your travel profile and trips.
+
+**AI-Generated Content.** Trip plans are AI-generated using Google's Gemini API and your own API key, entered in **Profile → API Integrations**. AI-generated itineraries may be inaccurate, outdated, or unsuitable for your circumstances — **always verify hours, prices, safety, road conditions, visa requirements, and bookings before you travel.** Your prompt and travel profile are sent directly from your device to Google's Gemini API using your own key; DataCraft Studio LLC has no access to your prompts, responses, or key. Your use of the Gemini API is governed by [Google's Terms of Service](https://policies.google.com/terms), and we're not responsible for outages, rate limits, or the accuracy of Gemini's responses.
+
+**Travel Points.** AI itinerary generation and refinement consume Travel Points from a server-managed balance tied to your account; manual planning never costs points. Points may be purchased as in-app packages. Travel Points have no cash value, are non-transferable, and are not redeemable for cash.
+
+**Account Deletion.** Deleting your account (**Profile → Delete My Account**) permanently deletes your account, travel profile, all synced trips, and your Travel Points balance — this can't be undone, and any remaining Travel Points balance is forfeited.

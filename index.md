@@ -5,6 +5,11 @@ title: DataCraft Studio
 
 # DataCraft Studio LLC
 
-We built *My Fitness Journey* for iOS.
+We build apps for iOS. One account gets you into all of them.
 
-[Privacy Policy](https://eliesernodarse-bit.github.io/datacraftstudio-site/privacy) · [Terms of Service](https://eliesernodarse-bit.github.io/datacraftstudio-site/terms)
+## Our Apps
+
+- **My Fitness Journey** — a local-first fitness tracking app: workouts, nutrition, biometrics, goals, and optional AI coaching.
+- **trvlr** — AI-assisted trip planning: build itineraries, keep your travel profile and trips synced across devices.
+
+[Privacy Policy](https://datacraftstudiollc.com/privacy) · [Terms of Service](https://datacraftstudiollc.com/terms)
