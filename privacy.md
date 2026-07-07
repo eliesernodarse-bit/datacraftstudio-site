@@ -52,36 +52,35 @@ support@datacraftllc.com
 
 ## My Fitness Journey
 
-My Fitness Journey is a fitness tracking app. Your health and fitness data — workouts, nutrition logs, biometrics, and goals — lives entirely on your device and is never uploaded to any server. My Fitness Journey does require a DataCraft Studio account (see General above) — used only to keep your **Fit Points** balance (spent on AI Coach questions, Meal Plans, and Workout Splits) safe across devices; it has no bearing on your fitness data, which stays local either way.
+My Fitness Journey is a fitness tracking app. My Fitness Journey requires a DataCraft Studio account (see General above) — used to keep your **Fit Points** balance (spent on AI Coach questions, Meal Plans, and Workout Splits) safe across devices, and to sync your workouts, nutrition logs, biometrics, goals, and profile so they survive a reinstall or a new device.
 
-**Data stored on your device** (AsyncStorage, and secure device storage for sensitive items — never transmitted to DataCraft Studio LLC, and only ever sent to a third-party service if you actively use an optional feature with your own API key):
+**Data tied to your account, stored in Cloud Firestore (Google Cloud):**
 
-- **Workout logs** — exercise names, sets, reps, weights, and dates
-- **Nutrition logs** — meal names, calorie counts, macros (protein, carbs, fat), and dates
-- **Biometric entries** — body weight and body fat percentage measurements
-- **Goals** — target weight, body fat, and workout frequency
-- **User profile** — name, age, height, starting weight, sex, and activity level
-- **App settings** — theme preference, unit preferences, and accessibility settings
-- **API keys** — your Gemini or USDA API key, if provided (stored using secure device storage)
+- **Fit Points balance** — a points ledger used to pay for AI Coach questions, Meal Plans, and Workout Splits; server-managed, never directly editable by the app.
+- **Workout logs** — exercise names, sets, reps, weights, and dates.
+- **Nutrition logs** — meal names, calorie counts, macros (protein, carbs, fat), dates, saved meal favorites, and manually-entered foods.
+- **Biometric entries** — body weight and body fat percentage measurements over time. This is the one place your weight history is stored — your profile itself does not duplicate it (see below).
+- **Goals** — target weight, body fat, workout frequency, fitness goal, pace, and activity level.
+- **User profile** — name, date of birth, height, sex, and activity level. Your **starting weight, entered during onboarding, is deliberately not included here** — it's stored as a biometric entry instead, so there's only one place your weight actually lives.
+- **AI Workout Split** — your most recently generated/saved workout split, if any.
+- **Weekly check-ins & nutrition target history** — the app's periodic nutrition recommendations and the record of target changes you've applied.
 
-You can delete all of this data at any time via **Settings → Manage Data → Delete All Data**.
+**Data stored only on your device** (never transmitted to DataCraft Studio LLC): your Gemini or USDA API key (secure device storage), and app settings (theme, unit preferences, accessibility settings).
 
 **iCloud Backup:** iOS may include your app data in your iCloud backup by default, controlled entirely by you through your iPhone's iCloud settings and governed by Apple's Privacy Policy — we have no access to it.
 
-**Data Loss:** If you delete the app or lose your device, locally stored data may be lost unless preserved by your device's own backup behavior. We recommend exporting your data periodically via **Settings → Manage Data → Export Data**.
-
 **AI Features (AI Coach, Meal Planner, Workout Split Builder):** These require your own Google Gemini API key, entered in **Settings → API Integrations** and stored using secure device storage (`expo-secure-store`) — never transmitted to DataCraft Studio LLC. When used, relevant app context (goals, recent workouts, nutrition summary) and your prompt are sent **directly from your device to Google's Gemini API** using your own key; we have no visibility into your prompts, responses, or key. Responses are general guidance only, may be inaccurate, and are not a substitute for professional advice — do not enter sensitive medical information. Governed by [Google's Privacy Policy](https://policies.google.com/privacy).
 
-**Food Search (USDA FoodData Central):** Optional, requires your own USDA API key in **Settings → API Integrations**, stored the same way as your Gemini key. Search queries go directly from your device to the USDA's API using your key; we have no visibility into them. Governed by the [USDA's privacy policy](https://www.usda.gov/privacy-policy). Delete your key anytime via **Settings → API Integrations** or **Settings → Manage Data → Delete All Data**.
+**Food Search (USDA FoodData Central):** Optional, requires your own USDA API key in **Settings → API Integrations**, stored the same way as your Gemini key. Search queries go directly from your device to the USDA's API using your key; we have no visibility into them. Governed by the [USDA's privacy policy](https://www.usda.gov/privacy-policy). Delete your key anytime via **Settings → API Integrations**.
 
-**Fit Points:** a points balance used to pay for AI Coach questions, Meal Plans, and Workout Splits, stored in Cloud Firestore against your account — server-managed, never directly editable by the app. Deleting your account (**Profile → Delete Account**) permanently deletes your Fit Points balance; this is separate from **Delete All Data**, which only clears locally stored fitness data and leaves your account and Fit Points untouched.
+**Deleting your account:** available via **Profile → Delete Account** — permanently deletes your account, Fit Points balance, and all synced workouts/nutrition/biometrics/goals/profile data. This can't be undone. This is the only way to delete your fitness data — there is no separate local-only wipe.
 
-**Your Rights:** since all fitness data is stored locally, you have full control over it — **Access** it anytime in the app, **Export** a full JSON copy via **Settings → Manage Data → Export Data**, or **Delete** it via **Settings → Manage Data → Delete All Data**. Your account and Fit Points balance are deleted separately, via **Profile → Delete Account**.
+**Your Rights:** **Access** your data anytime in the app, or **delete** everything (account + all synced data) via **Profile → Delete Account**.
 
 | Service | Purpose | Data Sent | Their Privacy Policy |
 |---|---|---|---|
 | Firebase Authentication | Account sign-in | Email, password (handled by Firebase) | [Link](https://policies.google.com/privacy) |
-| Cloud Firestore | Storing your Fit Points balance | Points balance | [Link](https://policies.google.com/privacy) |
+| Cloud Firestore | Storing your Fit Points balance, workouts, nutrition logs, biometrics, goals, and profile | Fitness data + points balance | [Link](https://policies.google.com/privacy) |
 | Google Gemini API | AI Coach, Meal Planner, Workout Split Builder *(your own key)* | App context + your prompt | [Link](https://policies.google.com/privacy) |
 | USDA FoodData Central | Food search *(optional, your own key)* | Search query | [Link](https://www.usda.gov/privacy-policy) |
 
