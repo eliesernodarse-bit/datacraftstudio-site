@@ -12,7 +12,7 @@ title: Terms of Service
 
 ---
 
-These Terms of Service cover every app published by DataCraft Studio LLC — currently **fitr+** and **travelr+** — and apply automatically to any app we publish in the future. The **General** section below applies to all of our apps. Each app then has its own section covering anything specific to that app.
+These Terms of Service cover every app published by DataCraft Studio LLC — currently **fitr+** (with **travelr+** launching soon) — and apply automatically to any app we publish in the future. The **General** section below applies to all of our apps. Each app then has its own section covering anything specific to that app.
 
 ---
 

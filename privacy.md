@@ -12,7 +12,7 @@ title: Privacy Policy
 
 ---
 
-This Privacy Policy covers every app published by DataCraft Studio LLC — currently **fitr+** and **travelr+** — and applies automatically to any app we publish in the future. The **General** section below applies to all of our apps and to the shared account system. Each app then has its own section describing exactly what that app collects and how it works.
+This Privacy Policy covers every app published by DataCraft Studio LLC — currently **fitr+** (with **travelr+** launching soon) — and applies automatically to any app we publish in the future. The **General** section below applies to all of our apps and to the shared account system. Each app then has its own section describing exactly what that app collects and how it works.
 
 ---
 
