@@ -1,5 +1,5 @@
 # DataCraft Studio LLC
 
-We built *My Fitness Journey* for iOS.
+We build apps for iOS: *fitr+* and *travelr+*.
 
-[Privacy Policy](https://eliesernodarse-bit.github.io/datacraftstudio-site/privacy)
+[Privacy Policy](https://datacraftstudiollc.com/privacy) · [Terms of Service](https://datacraftstudiollc.com/terms)

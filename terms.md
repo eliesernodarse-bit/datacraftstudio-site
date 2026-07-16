@@ -12,7 +12,7 @@ title: Terms of Service
 
 ---
 
-These Terms of Service cover every app published by DataCraft Studio LLC — currently **My Fitness Journey** and **trvlr** — and apply automatically to any app we publish in the future. The **General** section below applies to all of our apps. Each app then has its own section covering anything specific to that app.
+These Terms of Service cover every app published by DataCraft Studio LLC — currently **fitr+** and **travelr+** — and apply automatically to any app we publish in the future. The **General** section below applies to all of our apps. Each app then has its own section covering anything specific to that app.
 
 ---
 
@@ -24,9 +24,7 @@ By downloading, installing, or using any app published by DataCraft Studio LLC (
 
 ### 2. Accounts
 
-Some of our Apps (currently trvlr) require creating an account via Firebase Authentication. That one account works across every current and future DataCraft Studio app — you're responsible for maintaining the confidentiality of your account credentials and for all activity under your account. You may delete your account at any time from within any App that uses it; this permanently deletes the account and all app-specific data tied to it (see each App's section below).
-
-Apps that don't currently require an account (see My Fitness Journey below) have no account system at all — there is nothing to create, and nothing tied to an account to delete.
+All of our Apps require creating an account via Firebase Authentication. That one account works across every current and future DataCraft Studio app — you're responsible for maintaining the confidentiality of your account credentials and for all activity under your account. You may delete your account at any time from within any App that uses it; this permanently deletes the account and all app-specific data tied to it (see each App's section below).
 
 ### 3. Eligibility
 
@@ -71,9 +69,9 @@ support@datacraftllc.com
 
 ---
 
-## My Fitness Journey
+## fitr+
 
-**Description:** My Fitness Journey is a personal fitness tracking application — log workouts, track nutrition, monitor biometrics, set goals, and optionally use AI-powered features (AI Coach, Meal Planner, Workout Split Builder — each requires your own Google Gemini API key). The App requires a DataCraft Studio account (see General → Section 2) to keep your **Fit Points** balance — spent on AI Coach questions, Meal Plans, and Workout Splits — safe across devices, and to sync your workouts, nutrition logs, biometrics, goals, and profile so they survive a reinstall or a new device.
+**Description:** fitr+ is a personal fitness tracking application — log workouts, track nutrition, monitor biometrics, set goals, and optionally use AI-powered features (AI Coach, Meal Planner, Workout Split Builder — powered by Google's Gemini model through our own backend, no API key of your own required). The App requires a DataCraft Studio account (see General → Section 2) to keep your **Energy Points** balance — spent on AI Coach questions, Meal Plans, and Workout Splits — safe across devices, and to sync your workouts, nutrition logs, biometrics, goals, and profile so they survive a reinstall or a new device.
 
 **Not Medical Advice.** THE APP IS NOT A MEDICAL DEVICE AND DOES NOT PROVIDE MEDICAL ADVICE. Workout logs, nutrition tracking, calorie/macro estimates, biometric monitoring, goal recommendations, and AI coaching responses are for **general informational and fitness tracking purposes only** and are not a substitute for professional medical advice, diagnosis, or treatment.
 
@@ -84,21 +82,21 @@ support@datacraftllc.com
 
 **Assumption of Risk.** Physical exercise involves inherent risks, including muscle strain, injury, or serious harm. By using the App, you acknowledge and accept these risks. You are solely responsible for assessing your own fitness/health before undertaking any suggested exercise program, consulting a healthcare professional where appropriate, and using safe form and technique.
 
-**Third-Party API Services.** When you use AI Coach, Meal Planner, or Workout Split Builder, your context and prompt are sent directly from your device to Google's Gemini API using your own key — we have no access to your prompts, responses, or key; you're responsible for complying with Google's terms, and your use is governed by [Google's Terms of Service](https://policies.google.com/terms). The Food Search feature works the same way with your own USDA FoodData Central key, governed by the [USDA's terms](https://www.usda.gov/policies-and-links). We're not responsible for outages, rate limits, or content from either provider.
+**Third-Party API Services.** When you use AI Coach, Meal Planner, or Workout Split Builder, your context and prompt are sent from your device to our own backend (Firebase Cloud Functions), which forwards them to Google's Gemini API using a key we manage and returns the response to your device — we do not store or log your prompts or Gemini's responses. You're responsible for complying with Google's terms for content generated this way, and your use is governed by [Google's Terms of Service](https://policies.google.com/terms). The Food Search feature works differently — it uses your own USDA FoodData Central key, sent directly from your device to the USDA's API, governed by the [USDA's terms](https://www.usda.gov/policies-and-links). We're not responsible for outages, rate limits, or content from either provider.
 
-**Fit Points.** AI Coach questions, Meal Plans, and Workout Splits each consume Fit Points from a server-managed balance tied to your account; manual logging (workouts, nutrition, biometrics) never costs points. Fit Points are deducted the moment you start an AI action and are **non-refundable**, even if the request fails, is interrupted, or you leave or background the App before it finishes — the App warns you of this before each AI action starts, so keep it open in the foreground until it completes. Points may be purchased as in-app packages. Fit Points have no cash value, are non-transferable, and are not redeemable for cash.
+**Energy Points.** AI Coach questions, Meal Plans, and Workout Splits each consume Energy Points from a server-managed balance tied to your account; manual logging (workouts, nutrition, biometrics) never costs points. Energy Points are deducted the moment you start an AI action and are **non-refundable**, even if the request fails, is interrupted, or you leave or background the App before it finishes — the App warns you of this before each AI action starts, so keep it open in the foreground until it completes. Points may be purchased as in-app packages. Energy Points have no cash value, are non-transferable, and are not redeemable for cash.
 
 **Eligibility Note.** The App is not designed for individuals with serious medical conditions without prior written clearance from a qualified healthcare provider.
 
-**Account Deletion.** Deleting your account (**Profile → Delete Account**) permanently deletes your account, Fit Points balance, and all synced fitness data (workouts, nutrition, biometrics, goals, profile) — this can't be undone, and any remaining balance is forfeited.
+**Account Deletion.** Deleting your account (**Profile → Delete Account**) permanently deletes your account, Energy Points balance, and all synced fitness data (workouts, nutrition, biometrics, goals, profile) — this can't be undone, and any remaining balance is forfeited.
 
 ---
 
-## trvlr
+## travelr+
 
-**Description:** trvlr is an AI-assisted trip planning app — build day-by-day itineraries, browse them on a map, and refine them with AI. Unlike My Fitness Journey, trvlr requires a DataCraft Studio account (see General → Section 2) to keep your Travel Points balance safe across devices and, optionally, sync your travel profile and trips.
+**Description:** travelr+ is an AI-assisted trip planning app — build day-by-day itineraries, browse them on a map, and refine them with AI. Like fitr+, travelr+ requires a DataCraft Studio account (see General → Section 2) to keep your Travel Points balance safe across devices and to sync your travel profile and trips.
 
-**AI-Generated Content.** Trip plans are AI-generated using Google's Gemini API and your own API key, entered in **Profile → API Integrations**. AI-generated itineraries may be inaccurate, outdated, or unsuitable for your circumstances — **always verify hours, prices, safety, road conditions, visa requirements, and bookings before you travel.** Your prompt and travel profile are sent directly from your device to Google's Gemini API using your own key; DataCraft Studio LLC has no access to your prompts, responses, or key. Your use of the Gemini API is governed by [Google's Terms of Service](https://policies.google.com/terms), and we're not responsible for outages, rate limits, or the accuracy of Gemini's responses.
+**AI-Generated Content.** Trip plans are generated using Google's Gemini model through our own backend (Firebase Cloud Functions) — no API key of your own required. AI-generated itineraries may be inaccurate, outdated, or unsuitable for your circumstances — **always verify hours, prices, safety, road conditions, visa requirements, and bookings before you travel.** Your prompt and travel profile are sent from your device to our Cloud Function, which forwards them to Google's Gemini API using a key we manage and returns the response to your device; we do not store or log your prompts or Gemini's responses. Your use is governed by [Google's Terms of Service](https://policies.google.com/terms), and we're not responsible for outages, rate limits, or the accuracy of Gemini's responses.
 
 **Travel Points.** AI itinerary generation and refinement consume Travel Points from a server-managed balance tied to your account; manual planning never costs points. Travel Points are deducted the moment you start an AI action and are **non-refundable**, even if the request fails, is interrupted, or you leave or background the App before it finishes — the App warns you of this before each AI action starts, so keep it open in the foreground until it completes. Points may be purchased as in-app packages. Travel Points have no cash value, are non-transferable, and are not redeemable for cash.
 
