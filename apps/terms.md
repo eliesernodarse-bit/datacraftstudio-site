@@ -36,7 +36,7 @@ Each App, including its design, code, graphics, and content, is owned by DataCra
 
 ### 5. Privacy
 
-Your use of any App is also governed by our [Privacy Policy](https://datacraftstudiollc.com/privacy), which is incorporated into these Terms by reference.
+Your use of any App is also governed by our [Privacy Policy](https://datacraftstudiollc.com/apps/privacy), which is incorporated into these Terms by reference.
 
 ### 6. Third-Party Services (General)
 
