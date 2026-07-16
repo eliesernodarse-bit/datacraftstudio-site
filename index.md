@@ -9,7 +9,7 @@ We build apps for iOS. One account gets you into all of them.
 
 ## Our Apps
 
-- **fitr+** — a local-first fitness tracking app: workouts, nutrition, biometrics, goals, and optional AI coaching.
+- **fitr+** — a fitness tracking app: workouts, nutrition, biometrics, goals, and optional AI coaching, synced across devices.
 - **travelr+** — AI-assisted trip planning: build itineraries, keep your travel profile and trips synced across devices.
 
 [Privacy Policy](https://datacraftstudiollc.com/privacy) · [Terms of Service](https://datacraftstudiollc.com/terms)
