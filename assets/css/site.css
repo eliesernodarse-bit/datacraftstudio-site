@@ -184,7 +184,10 @@ a:focus-visible, button:focus-visible {
   color: var(--muted);
   font-size: 1.05rem;
   max-width: 62ch;
-  margin: 0 0 48px;
+  margin: 0 0 18px;
+}
+.detail-body:last-of-type {
+  margin-bottom: 48px;
 }
 
 /* Screenshot carousel */
@@ -334,12 +337,21 @@ a:focus-visible, button:focus-visible {
   border-top: 1px solid var(--hairline);
 }
 .account-note .eyebrow { color: var(--thread); }
+.account-head {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.4vw, 1.9rem);
+  text-wrap: balance;
+  margin: 0 0 16px;
+}
 .account-body {
   font-size: 1.15rem;
   color: var(--paper);
   opacity: 0.92;
   text-wrap: balance;
   margin: 0;
+}
+.account-body + .account-body {
+  margin-top: 16px;
 }
 
 /* Footer */
