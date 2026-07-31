@@ -133,6 +133,9 @@ a:focus-visible, button:focus-visible {
   margin: 0;
   text-wrap: balance;
 }
+.intro-body + .intro-body {
+  margin-top: 18px;
+}
 
 /* Detail sections */
 
