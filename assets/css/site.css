@@ -78,12 +78,21 @@ a:focus-visible, button:focus-visible {
   padding: 22px clamp(20px, 5vw, 56px);
 }
 .wordmark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--paper);
+}
+.wordmark-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  flex: none;
 }
 .site-nav { display: flex; gap: 24px; }
 .site-nav a {
