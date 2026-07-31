@@ -126,12 +126,10 @@ a:focus-visible, button:focus-visible {
   letter-spacing: -0.01em;
 }
 .intro-body {
-  color: var(--paper);
-  opacity: 0.9;
-  font-size: 1.15rem;
+  color: var(--muted);
+  font-size: 1.05rem;
   max-width: 62ch;
   margin: 0;
-  text-wrap: balance;
 }
 .intro-body + .intro-body {
   margin-top: 18px;
