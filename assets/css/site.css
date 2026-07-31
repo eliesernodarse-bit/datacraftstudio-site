@@ -89,9 +89,8 @@ a:focus-visible, button:focus-visible {
   color: var(--paper);
 }
 .wordmark-icon {
-  width: 24px;
-  height: 24px;
-  border-radius: 6px;
+  width: 32px;
+  height: 32px;
   flex: none;
 }
 .site-nav { display: flex; gap: 24px; }
