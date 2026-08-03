@@ -80,7 +80,7 @@ a:focus-visible, button:focus-visible {
 .wordmark {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.12em;
@@ -89,8 +89,8 @@ a:focus-visible, button:focus-visible {
   color: var(--paper);
 }
 .wordmark-icon {
-  width: 32px;
-  height: 32px;
+  width: 56px;
+  height: 56px;
   flex: none;
 }
 .site-nav { display: flex; gap: 24px; }
