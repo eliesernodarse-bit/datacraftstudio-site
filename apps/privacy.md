@@ -8,7 +8,7 @@ title: Privacy Policy
 **Developer:** DataCraft Studio LLC  
 **Contact:** support@datacraftllc.com  
 **Effective Date:** June 19, 2026  
-**Last Updated:** July 6, 2026
+**Last Updated:** August 3, 2026
 
 ---
 
@@ -63,26 +63,29 @@ fitr+ is a fitness tracking app. fitr+ requires a DataCraft Studio account (see 
 - **User profile** — name, date of birth, height, sex, and activity level. Your **starting weight, entered during onboarding, is deliberately not included here** — it's stored as a biometric entry instead, so there's only one place your weight actually lives.
 - **AI Workout Split** — your most recently generated/saved workout split, if any.
 - **Weekly check-ins & nutrition target history** — the app's periodic nutrition recommendations and the record of target changes you've applied.
+- **Membership & purchase records** — if you buy Energy Points or subscribe to Membership, we store the Apple-issued transaction ID and product ID for each purchase (used to verify it with Apple and prevent double-crediting), and, for Membership, your subscription status and renewal date. See **Payments & Subscriptions** below for the full picture, including what we never see.
 
-**Data stored only on your device** (never transmitted to DataCraft Studio LLC): your USDA API key (secure device storage), and app settings (theme, unit preferences, accessibility settings).
+**Data stored only on your device** (never transmitted to DataCraft Studio LLC): app settings (theme, unit preferences, accessibility settings). **Workout and meal photos also stay device-only** — if you attach a photo to a workout or meal, it's never uploaded or synced, even though the workout/meal entry itself is.
 
 **iCloud Backup:** iOS may include your app data in your iCloud backup by default, controlled entirely by you through your iPhone's iCloud settings and governed by Apple's Privacy Policy — we have no access to it.
 
 **AI Features (AI Coach, Meal Planner, Workout Split Builder):** These use Google's Gemini model through our own backend (Firebase Cloud Functions) — you do not need, and the app does not ask for, your own Gemini API key. When you use one of these features, relevant app context (goals, recent workouts, nutrition summary) and your prompt are sent from your device to our Cloud Function, which forwards them to Google's Gemini API using a key we manage, and returns the response to your device. **Our backend does not store or log your prompts or Gemini's responses** — the only thing recorded is which feature you used, when, and whether it succeeded, tied to your account (this is also what your Energy Points balance is spent against). Responses are general guidance only, may be inaccurate, and are not a substitute for professional advice — do not enter sensitive medical information. Governed by [Google's Privacy Policy](https://policies.google.com/privacy).
 
-**Food Search (USDA FoodData Central):** Optional, requires your own USDA API key in **Settings → API Integrations**, stored using secure device storage (`expo-secure-store`) — never transmitted to DataCraft Studio LLC. Search queries go directly from your device to the USDA's API using your key; we have no visibility into them. Governed by the [USDA's privacy policy](https://www.usda.gov/privacy-policy). Delete your key anytime via **Settings → API Integrations**.
+**Food Search:** fitr+'s food search runs entirely against a food database built into the app, plus any foods you've manually entered yourself — there's no external food-search service and no data leaves your device to perform a search.
 
-**Deleting your account:** available via **Profile → Delete Account** — permanently deletes your account, Energy Points balance, and all synced workouts/nutrition/biometrics/goals/profile data. This can't be undone. This is the only way to delete your fitness data — there is no separate local-only wipe.
+**Payments & Subscriptions:** Energy Points packages and the Membership subscription are purchased through Apple's In-App Purchase system. **Your payment details (card number, billing address, etc.) are handled entirely by Apple — we never see or store them.** When a purchase completes, Apple provides our backend a signed transaction record, which we verify and use to credit your Energy Points or activate Membership; we store the resulting transaction ID, product ID, and (for Membership) your subscription status and renewal date, tied to your account, so your purchase and entitlement survive a reinstall. Apple may also notify our backend directly of subscription events (renewals, cancellations, refunds) so your Membership status stays current without reopening the app. Purchases are governed by [Apple's Privacy Policy](https://www.apple.com/legal/privacy/) and the [Apple Media Services Terms](https://www.apple.com/legal/internet-services/itunes/) — refund requests go to Apple, not to us (see fitr+'s Terms of Service for the full Membership/Energy Points terms).
+
+**Deleting your account:** available via **Profile → Delete Account** — permanently deletes your account, Energy Points balance, and all synced workouts/nutrition/biometrics/goals/profile data. This can't be undone. This is the only way to delete your fitness data — there is no separate local-only wipe. **Note:** the Apple transaction/product IDs used to verify past purchases (see Payments & Subscriptions above) are retained after account deletion as a fraud-prevention record tied to the transaction itself, not to your account — they're not linked back to your name, email, or fitness data once your account is deleted.
 
 **Your Rights:** **Access** your data anytime in the app, or **delete** everything (account + all synced data) via **Profile → Delete Account**.
 
 | Service | Purpose | Data Sent | Their Privacy Policy |
 |---|---|---|---|
 | Firebase Authentication | Account sign-in | Email, password (handled by Firebase) | [Link](https://policies.google.com/privacy) |
-| Cloud Firestore | Storing your Energy Points balance, workouts, nutrition logs, biometrics, goals, and profile | Fitness data + points balance | [Link](https://policies.google.com/privacy) |
-| Cloud Functions (our backend) | Proxies AI Coach, Meal Planner, and Workout Split Builder requests to Gemini using our own key — not stored or logged | App context + your prompt (in transit only) | [Link](https://policies.google.com/privacy) |
+| Cloud Firestore | Storing your Energy Points balance, workouts, nutrition logs, biometrics, goals, profile, and purchase/Membership records | Fitness data + points balance + purchase records | [Link](https://policies.google.com/privacy) |
+| Cloud Functions (our backend) | Proxies AI Coach, Meal Planner, and Workout Split Builder requests to Gemini using our own key — not stored or logged; also verifies Apple purchase transactions | App context + your prompt (in transit only); Apple transaction data | [Link](https://policies.google.com/privacy) |
 | Google Gemini API | Generates AI Coach, Meal Planner, and Workout Split Builder responses | App context + your prompt (via our backend) | [Link](https://policies.google.com/privacy) |
-| USDA FoodData Central | Food search *(optional, your own key)* | Search query | [Link](https://www.usda.gov/privacy-policy) |
+| Apple In-App Purchase | Processes Energy Points and Membership payments | Payment/billing details (never seen by us); transaction record shared with our backend | [Link](https://www.apple.com/legal/privacy/) |
 
 ---
 

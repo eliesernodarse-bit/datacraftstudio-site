@@ -8,7 +8,7 @@ title: Terms of Service
 **Developer:** DataCraft Studio LLC  
 **Contact:** support@datacraftllc.com  
 **Effective Date:** June 19, 2026  
-**Last Updated:** July 6, 2026
+**Last Updated:** August 3, 2026
 
 ---
 
@@ -40,7 +40,7 @@ Your use of any App is also governed by our [Privacy Policy](https://datacraftst
 
 ### 6. Third-Party Services (General)
 
-Where an App uses a third-party service (e.g., Google Gemini, USDA FoodData Central, Firebase), we are not responsible for the availability, accuracy, content, or policies of that service, and your use of it is governed by that provider's own terms. See each App's section below for which services it uses and how.
+Where an App uses a third-party service (e.g., Google Gemini, Firebase, Apple's In-App Purchase system), we are not responsible for the availability, accuracy, content, or policies of that service, and your use of it is governed by that provider's own terms. See each App's section below for which services it uses and how.
 
 ### 7. Disclaimer of Warranties
 
@@ -82,13 +82,22 @@ support@datacraftllc.com
 
 **Assumption of Risk.** Physical exercise involves inherent risks, including muscle strain, injury, or serious harm. By using the App, you acknowledge and accept these risks. You are solely responsible for assessing your own fitness/health before undertaking any suggested exercise program, consulting a healthcare professional where appropriate, and using safe form and technique.
 
-**Third-Party API Services.** When you use AI Coach, Meal Planner, or Workout Split Builder, your context and prompt are sent from your device to our own backend (Firebase Cloud Functions), which forwards them to Google's Gemini API using a key we manage and returns the response to your device — we do not store or log your prompts or Gemini's responses. You're responsible for complying with Google's terms for content generated this way, and your use is governed by [Google's Terms of Service](https://policies.google.com/terms). The Food Search feature works differently — it uses your own USDA FoodData Central key, sent directly from your device to the USDA's API, governed by the [USDA's terms](https://www.usda.gov/policies-and-links). We're not responsible for outages, rate limits, or content from either provider.
+**Third-Party API Services.** When you use AI Coach, Meal Planner, or Workout Split Builder, your context and prompt are sent from your device to our own backend (Firebase Cloud Functions), which forwards them to Google's Gemini API using a key we manage and returns the response to your device — we do not store or log your prompts or Gemini's responses. You're responsible for complying with Google's terms for content generated this way, and your use is governed by [Google's Terms of Service](https://policies.google.com/terms). Food Search runs against a food database built into the App plus any foods you enter manually — no external service is involved. We're not responsible for outages, rate limits, or content from Google's Gemini API.
 
-**Energy Points.** AI Coach questions, Meal Plans, and Workout Splits each consume Energy Points from a server-managed balance tied to your account; manual logging (workouts, nutrition, biometrics) never costs points. Energy Points are deducted the moment you start an AI action and are **non-refundable**, even if the request fails, is interrupted, or you leave or background the App before it finishes — the App warns you of this before each AI action starts, so keep it open in the foreground until it completes. Points may be purchased as in-app packages. Energy Points have no cash value, are non-transferable, and are not redeemable for cash.
+**Energy Points.** AI Coach questions, Meal Plans, and Workout Splits each consume Energy Points from a server-managed balance tied to your account; manual logging (workouts, nutrition, biometrics) never costs points. Energy Points are deducted the moment you start an AI action and are **non-refundable**, even if the request fails, is interrupted, or you leave or background the App before it finishes — the App warns you of this before each AI action starts, so keep it open in the foreground until it completes. Points may be purchased as one-time in-app packages, or obtained via Membership (below). Energy Points have no cash value, are non-transferable, and are not redeemable for cash.
+
+**Membership (Auto-Renewing Subscription).** fitr+ offers an optional Membership subscription, currently priced at **$29.99/month**, which grants a daily Energy Points top-up (bringing your balance up to a fixed daily floor, not stacking on top of it) along with access to AI Coach, Workout Split Builder, and Meal Planner. Membership is a standard Apple in-app auto-renewing subscription:
+
+- Payment is charged to your Apple ID account at confirmation of purchase.
+- Your subscription **automatically renews** for the same price and duration unless you turn off auto-renewal at least 24 hours before the end of the current billing period.
+- Your account will be charged for renewal within 24 hours prior to the end of the current period, at the then-current price.
+- You can manage or cancel your subscription anytime in your **Apple ID Account Settings** (Settings → [your name] → Subscriptions on your device) — not through the App itself.
+- Canceling stops future renewals but does not refund the current billing period; you keep Membership benefits through the end of the period you already paid for.
+- **All purchases and subscriptions are processed by Apple**, not by DataCraft Studio LLC. Billing, refunds, and payment disputes are handled by Apple according to the [Apple Media Services Terms](https://www.apple.com/legal/internet-services/itunes/) — refund requests should be directed to Apple, not to us.
 
 **Eligibility Note.** The App is not designed for individuals with serious medical conditions without prior written clearance from a qualified healthcare provider.
 
-**Account Deletion.** Deleting your account (**Profile → Delete Account**) permanently deletes your account, Energy Points balance, and all synced fitness data (workouts, nutrition, biometrics, goals, profile) — this can't be undone, and any remaining balance is forfeited.
+**Account Deletion.** Deleting your account (**Profile → Delete Account**) permanently deletes your account, Energy Points balance, and all synced fitness data (workouts, nutrition, biometrics, goals, profile) — this can't be undone, and any remaining Energy Points balance is forfeited. **Deleting your account does not cancel an active Membership subscription** — since Membership is billed and managed entirely through your Apple ID, you must separately cancel it in your Apple ID Account Settings, or it will continue to renew and charge you even after your DataCraft Studio account is gone.
 
 ---
 
