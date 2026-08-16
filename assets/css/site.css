@@ -195,6 +195,10 @@ a:focus-visible, button:focus-visible {
 .detail-body:last-of-type {
   margin-bottom: 48px;
 }
+.detail-body strong {
+  color: var(--paper);
+  font-weight: 600;
+}
 
 /* Screenshot carousel */
 
@@ -293,6 +297,32 @@ a:focus-visible, button:focus-visible {
 }
 
 /* travelr+ teaser card */
+
+/* fitr+ feature list — same hairline-divided pattern as .teaser-list,
+   with a bold/muted label split and a single divider marking the
+   free/paid boundary (matches the launch carousel's feature card). */
+.feature-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  max-width: 62ch;
+}
+.feature-list li {
+  padding: 9px 0;
+  color: var(--muted);
+}
+.feature-list li strong {
+  color: var(--paper);
+  font-weight: 600;
+}
+.feature-list li.ai-first {
+  border-top: 1px solid var(--hairline);
+  margin-top: 4px;
+  padding-top: 17px;
+}
+.feature-list li.ai strong {
+  color: var(--thread);
+}
 
 .teaser-card {
   display: flex;
