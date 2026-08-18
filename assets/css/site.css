@@ -178,6 +178,27 @@ a:focus-visible, button:focus-visible {
 .status-line--fitr { color: var(--fitr); }
 .status-line--travelr { color: var(--travelr); }
 
+.status-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 20px 0 0;
+  padding: 10px 20px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.status-cta--fitr { color: var(--fitr); }
+.status-cta--fitr:hover, .status-cta--fitr:focus-visible {
+  background: var(--fitr);
+  color: var(--ink);
+}
+
 .detail-head {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3.4vw, 1.9rem);
