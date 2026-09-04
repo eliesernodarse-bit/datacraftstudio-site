@@ -8,7 +8,7 @@ title: Privacy Policy
 **Developer:** DataCraft Studio LLC  
 **Contact:** support@datacraftllc.com  
 **Effective Date:** June 19, 2026  
-**Last Updated:** September 1, 2026
+**Last Updated:** September 3, 2026
 
 ---
 
@@ -51,21 +51,26 @@ support@datacraftllc.com
 
 ## fitr+
 
-fitr+ is a fitness tracking app. fitr+ requires a DataCraft Studio account (see General above) — used to keep your **Energy Points** balance (spent on AI Coach questions, AI meal recipes, and Workout Splits) safe across devices, and to sync your workouts, nutrition logs, biometrics, goals, and profile so they survive a reinstall or a new device.
+fitr+ is a fitness tracking app. fitr+ requires a DataCraft Studio account (see General above) — used to keep your **Energy Points** balance (spent on AI coaching answers, AI meal recipes, and AI workout splits) safe across devices, and to sync your workouts, nutrition logs, biometrics, goals, and profile so they survive a reinstall or a new device.
 
 **Data tied to your account, stored in Cloud Firestore (Google Cloud):**
 
-- **Energy Points balance** — a points ledger used to pay for AI Coach questions, AI meal recipes, and Workout Splits; server-managed, never directly editable by the app.
+- **Energy Points balance** — a points ledger used to pay for AI coaching answers, AI meal recipes, and AI workout splits; server-managed, never directly editable by the app.
 - **Workout logs** — exercise names, sets, reps, weights, and dates.
 - **Nutrition logs** — meal names, calorie counts, macros (protein, carbs, fat), dates, saved meal favorites, and manually-entered foods.
 - **Biometric entries** — body weight and body fat percentage measurements over time. This is the one place your weight history is stored — your profile itself does not duplicate it (see below).
 - **Goals** — target weight, body fat, workout frequency, fitness goal, pace, and activity level.
 - **User profile** — name, date of birth, height, sex, and activity level. Your **starting weight, entered during onboarding, is deliberately not included here** — it's stored as a biometric entry instead, so there's only one place your weight actually lives.
 - **AI Workout Split** — your most recently generated/saved workout split, if any.
+- **Saved recipes** — AI-generated recipes you chose to save, including their ingredients, steps and nutrition totals.
 - **Weekly check-ins & nutrition target history** — the app's periodic nutrition recommendations and the record of target changes you've applied.
+- **Coach selection** — which coach avatar you picked and the name you gave them.
+- **Reminder settings** — which reminders you've enabled and the times and days you chose. The reminders themselves are scheduled and delivered entirely by your own device (see Notifications below).
 - **Membership & purchase records** — if you buy Energy Points or subscribe to Membership, we store the Apple-issued transaction ID and product ID for each purchase (used to verify it with Apple and prevent double-crediting), and, for Membership, your subscription status and renewal date. See **Payments & Subscriptions** below for the full picture, including what we never see.
 
-**Data stored only on your device** (never transmitted to DataCraft Studio LLC): app settings (theme, unit preferences, accessibility settings). **Workout and meal photos also stay device-only** — if you attach a photo to a workout or meal, it's never uploaded or synced, even though the workout/meal entry itself is.
+**Data stored only on your device** (never transmitted to DataCraft Studio LLC): app settings (theme, unit preferences, accessibility settings); meal schedules; the muscle group you assign to a custom exercise; and recurring exercise notes. **Workout and meal photos also stay device-only** — if you attach a photo to a workout or meal, it's never uploaded or synced, even though the workout/meal entry itself is.
+
+**Notifications:** fitr+ has **no push-notification capability at all** — the app is built with the remote-push entitlement deliberately removed, so nothing we run can ever send your device a message. Every notification the app produces (workout, nutrition, weigh-in and weekly-review reminders, the rest timer, and the Lock Screen rest-timer Live Activity) is scheduled by your own device and delivered by iOS locally. They work with no network connection, and no notification content ever leaves your phone.
 
 **iCloud Backup:** iOS may include your app data in your iCloud backup by default, controlled entirely by you through your iPhone's iCloud settings and governed by Apple's Privacy Policy — we have no access to it.
 
