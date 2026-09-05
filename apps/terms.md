@@ -79,6 +79,9 @@ support@datacraftllc.com
 - Never disregard or delay seeking professional medical advice because of something in the App
 - Stop immediately and consult a healthcare professional if you experience pain, discomfort, dizziness, or shortness of breath during exercise
 - The AI Coach is not a licensed medical professional, dietitian, or personal trainer, and its responses may be inaccurate or inappropriate for your circumstances — you are responsible for judging their suitability
+- **AI-generated recipes are not allergen-safe.** fitr+ lets you list dietary restrictions and ingredients to avoid, and passes them to the model — but a generated recipe is **not reviewed, tested, or verified by a person**, and a language model can miss or ignore a restriction you set. Do not rely on it if you have a food allergy, intolerance, or medical condition where getting an ingredient wrong matters. Read every recipe in full and check each ingredient yourself before cooking or eating it.
+- **Your coach is a character, not a professional.** Naming a coach and choosing an avatar does not make the guidance personalized medical, dietary, or training supervision.
+- **Scheduled meals are added to your log automatically.** If you schedule a meal, fitr+ adds it to that day's food log on your behalf once its time has passed and you next open the app. It's a convenience, not a measurement — check it reflects what you actually ate, since your logged nutrition is what the weekly report and calorie recommendations are computed from.
 
 **Assumption of Risk.** Physical exercise involves inherent risks, including muscle strain, injury, or serious harm. By using the App, you acknowledge and accept these risks. You are solely responsible for assessing your own fitness/health before undertaking any suggested exercise program, consulting a healthcare professional where appropriate, and using safe form and technique.
 
