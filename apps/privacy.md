@@ -8,7 +8,7 @@ title: Privacy Policy
 **Developer:** DataCraft Studio LLC  
 **Contact:** support@datacraftllc.com  
 **Effective Date:** June 19, 2026  
-**Last Updated:** September 4, 2026
+**Last Updated:** September 7, 2026
 
 ---
 
@@ -51,17 +51,17 @@ support@datacraftllc.com
 
 ## fitr+
 
-fitr+ is a fitness tracking app. fitr+ requires a DataCraft Studio account (see General above) — used to keep your **Energy Points** balance (spent on AI coaching answers, AI meal recipes, and AI workout splits) safe across devices, and to sync your workouts, nutrition logs, biometrics, goals, and profile so they survive a reinstall or a new device.
+fitr+ is a fitness tracking app. fitr+ requires a DataCraft Studio account (see General above) — used to keep your **Energy Points** balance (spent on AI coaching answers, AI meal recipes, and AI workout plans) safe across devices, and to sync your workouts, nutrition logs, biometrics, goals, and profile so they survive a reinstall or a new device.
 
 **Data tied to your account, stored in Cloud Firestore (Google Cloud):**
 
-- **Energy Points balance** — a points ledger used to pay for AI coaching answers, AI meal recipes, and AI workout splits; server-managed, never directly editable by the app.
+- **Energy Points balance** — a points ledger used to pay for AI coaching answers, AI meal recipes, and AI workout plans; server-managed, never directly editable by the app.
 - **Workout logs** — exercise names, sets, reps, weights, and dates.
 - **Nutrition logs** — meal names, calorie counts, macros (protein, carbs, fat), dates, saved meal favorites, and manually-entered foods.
 - **Biometric entries** — body weight and body fat percentage measurements over time. This is the one place your weight history is stored — your profile itself does not duplicate it (see below).
 - **Goals** — target weight, body fat, workout frequency, fitness goal, pace, and activity level.
 - **User profile** — name, date of birth, height, sex, and activity level. Your **starting weight, entered during onboarding, is deliberately not included here** — it's stored as a biometric entry instead, so there's only one place your weight actually lives.
-- **AI Workout Split** — your most recently generated/saved workout split, if any.
+- **AI Workout Plan** — your most recently generated/saved workout plan, if any.
 - **Saved recipes** — AI-generated recipes you chose to save, including their ingredients, steps and nutrition totals.
 - **Weekly check-ins & nutrition target history** — the app's periodic nutrition recommendations and the record of target changes you've applied.
 - **Coach selection** — which coach avatar you picked and the name you gave them.
@@ -74,7 +74,7 @@ fitr+ is a fitness tracking app. fitr+ requires a DataCraft Studio account (see 
 
 **iCloud Backup:** iOS may include your app data in your iCloud backup by default, controlled entirely by you through your iPhone's iCloud settings and governed by Apple's Privacy Policy — we have no access to it.
 
-**AI Features (AI Coach, Meal Recipes, Workout Split Builder):** These use Google's Gemini model through our own backend (Firebase Cloud Functions) — you do not need, and the app does not ask for, your own Gemini API key. When you use one of these features, relevant app context (goals, recent workouts, nutrition summary, and — if you have connected Apple Health — your recent daily step counts) and your prompt are sent from your device to our Cloud Function, which forwards them to Google's Gemini API using a key we manage, and returns the response to your device. **Our backend does not store or log your prompts or Gemini's responses** — the only thing recorded is which feature you used, when, and whether it succeeded, tied to your account (this is also what your Energy Points balance is spent against). Responses are general guidance only, may be inaccurate, and are not a substitute for professional advice — do not enter sensitive medical information. Governed by [Google's Privacy Policy](https://policies.google.com/privacy).
+**AI Features (AI Coach, Meal Recipes, Workout Plan Builder):** These use Google's Gemini model through our own backend (Firebase Cloud Functions) — you do not need, and the app does not ask for, your own Gemini API key. When you use one of these features, relevant app context (goals, recent workouts, nutrition summary, and — if you have connected Apple Health — your recent daily step counts) and your prompt are sent from your device to our Cloud Function, which forwards them to Google's Gemini API using a key we manage, and returns the response to your device. **Our backend does not store or log your prompts or Gemini's responses** — the only thing recorded is which feature you used, when, and whether it succeeded, tied to your account (this is also what your Energy Points balance is spent against). Responses are general guidance only, may be inaccurate, and are not a substitute for professional advice — do not enter sensitive medical information. Governed by [Google's Privacy Policy](https://policies.google.com/privacy).
 
 **Apple Health (Steps & Energy):** fitr+ can optionally read three things from Apple Health: your **daily step count**, your **resting (basal) energy burned**, and your **active energy burned**. This is entirely opt-in — the app never reads Apple Health unless you turn on "Sync daily steps" in your goals, and iOS asks your permission separately first. It is **read-only** (fitr+ never writes to Apple Health), and **no other Health data type is requested**. Steps appear on your Home dashboard and chart in Trends; the two energy figures are used only to estimate how many calories you burn in a day, so that number can be shown against what you ate. All three are read fresh each time a screen needs them — they are **not** copied into your account, not stored on our servers, and not part of the account sync above. If you also use Ask Coach, your recent daily **step** totals are included in the context sent to Google's Gemini API (see AI Features above) so guidance can account for your general daily activity; your energy figures are **not** sent. Health data obtained through Apple Health is **never** used for advertising, marketing, or use-based data mining, and is never sold or shared with data brokers. Turning the toggle off stops all Health reading immediately and removes that data from everywhere it appears in the app.
 
@@ -92,8 +92,8 @@ fitr+ is a fitness tracking app. fitr+ requires a DataCraft Studio account (see 
 |---|---|---|---|
 | Firebase Authentication | Account sign-in | Email, password (handled by Firebase) | [Link](https://policies.google.com/privacy) |
 | Cloud Firestore | Storing your Energy Points balance, workouts, nutrition logs, biometrics, goals, profile, and purchase/Membership records | Fitness data + points balance + purchase records | [Link](https://policies.google.com/privacy) |
-| Cloud Functions (our backend) | Proxies AI Coach, Meal Recipes, and Workout Split Builder requests to Gemini using our own key — not stored or logged; also verifies Apple purchase transactions | App context + your prompt (in transit only); Apple transaction data | [Link](https://policies.google.com/privacy) |
-| Google Gemini API | Generates AI Coach, Meal Recipes, and Workout Split Builder responses | App context + your prompt (via our backend) | [Link](https://policies.google.com/privacy) |
+| Cloud Functions (our backend) | Proxies AI Coach, Meal Recipes, and Workout Plan Builder requests to Gemini using our own key — not stored or logged; also verifies Apple purchase transactions | App context + your prompt (in transit only); Apple transaction data | [Link](https://policies.google.com/privacy) |
+| Google Gemini API | Generates AI Coach, Meal Recipes, and Workout Plan Builder responses | App context + your prompt (via our backend) | [Link](https://policies.google.com/privacy) |
 | Apple Health (HealthKit) | Reads your daily steps and your resting/active energy, opt-in and read-only, to show progress and estimate calories burned | Nothing is sent to Apple; data is read on-device only | [Link](https://www.apple.com/legal/privacy/) |
 | Open Food Facts | Looks up a packaged food's name and nutrition from a scanned barcode | The barcode number and an app identifier only — no account or personal data | [Link](https://world.openfoodfacts.org/privacy) |
 | Apple In-App Purchase | Processes Energy Points and Membership payments | Payment/billing details (never seen by us); transaction record shared with our backend | [Link](https://www.apple.com/legal/privacy/) |
