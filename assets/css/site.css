@@ -342,8 +342,26 @@ a:focus-visible, button:focus-visible {
   max-width: 62ch;
 }
 .feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
   padding: 9px 0;
   color: var(--muted);
+}
+/* Mirrors the in-app paywall's benefit rows: the same Ionicons, drawn
+   inline rather than pulled from a CDN — this page loads no third-party
+   resources and icons are not worth making it start. Plain --paper, as on
+   the paywall, where tinting some rows was dropped for adding confusion. */
+.feat-icon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  margin-top: 3px;
+  stroke: var(--paper);
+  fill: none;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .feature-list li strong {
   color: var(--paper);
