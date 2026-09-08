@@ -16,8 +16,10 @@
   --thread: #8B5CF6;
   --thread-soft: rgba(139, 92, 246, 0.35);
 
-  --fitr: #3DDC84;
-  --fitr-tint: rgba(61, 220, 132, 0.10);
+  /* fitr+ accent — the app's own coach green, COACH_COLOR_PRIMARY in
+     FitnessApp/src/theme/coachColor.ts. Keep the two in step. */
+  --fitr: #729A51;
+  --fitr-tint: rgba(114, 154, 81, 0.10);
 
   --travelr: #FF9D4D;
   --travelr-tint: rgba(255, 157, 77, 0.10);
