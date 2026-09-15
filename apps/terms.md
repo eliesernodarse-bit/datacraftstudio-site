@@ -12,7 +12,7 @@ title: Terms of Service
 
 ---
 
-These Terms of Service cover every app published by DataCraft Studio LLC — currently **fitr+** (with **travelr+** launching soon) — and apply automatically to any app we publish in the future. The **General** section below applies to all of our apps. Each app then has its own section covering anything specific to that app.
+These Terms of Service cover every app published by DataCraft Studio LLC — currently **fitr+** — and apply automatically to any app we publish in the future. The **General** section below applies to all of our apps. Each app then has its own section covering anything specific to that app.
 
 ---
 
@@ -24,7 +24,7 @@ By downloading, installing, or using any app published by DataCraft Studio LLC (
 
 ### 2. Accounts
 
-All of our Apps require creating an account via Firebase Authentication. That one account works across every current and future DataCraft Studio app — you're responsible for maintaining the confidentiality of your account credentials and for all activity under your account. You may delete your account at any time from within any App that uses it; this permanently deletes the account and all app-specific data tied to it (see each App's section below).
+All of our Apps require creating an account via Firebase Authentication. You're responsible for maintaining the confidentiality of your account credentials and for all activity under your account. You may delete your account at any time from within any App that uses it; this permanently deletes the account and all app-specific data tied to it (see each App's section below).
 
 ### 3. Eligibility
 
@@ -102,15 +102,3 @@ support@datacraftllc.com
 **Eligibility Note.** The App is not designed for individuals with serious medical conditions without prior written clearance from a qualified healthcare provider.
 
 **Account Deletion.** Deleting your account (**Profile → Delete Account**) permanently deletes your account, Energy Points balance, and all synced fitness data (workouts, nutrition, biometrics, goals, profile) — this can't be undone, and any remaining Energy Points balance is forfeited. **Deleting your account does not cancel an active Membership subscription** — since Membership is billed and managed entirely through your Apple ID, you must separately cancel it in your Apple ID Account Settings, or it will continue to renew and charge you even after your DataCraft Studio account is gone.
-
----
-
-## travelr+
-
-**Description:** travelr+ is an AI-assisted trip planning app — build day-by-day itineraries, browse them on a map, and refine them with AI. Like fitr+, travelr+ requires a DataCraft Studio account (see General → Section 2) to keep your Travel Points balance safe across devices and to sync your travel profile and trips.
-
-**AI-Generated Content.** Trip plans are generated using Google's Gemini model through our own backend (Firebase Cloud Functions) — no API key of your own required. AI-generated itineraries may be inaccurate, outdated, or unsuitable for your circumstances — **always verify hours, prices, safety, road conditions, visa requirements, and bookings before you travel.** Your prompt and travel profile are sent from your device to our Cloud Function, which forwards them to Google's Gemini API using a key we manage and returns the response to your device; we do not store or log your prompts or Gemini's responses. Your use is governed by [Google's Terms of Service](https://policies.google.com/terms), and we're not responsible for outages, rate limits, or the accuracy of Gemini's responses.
-
-**Travel Points.** AI itinerary generation and refinement consume Travel Points from a server-managed balance tied to your account; manual planning never costs points. Travel Points are deducted the moment you start an AI action and are **non-refundable**, even if the request fails, is interrupted, or you leave or background the App before it finishes — the App warns you of this before each AI action starts, so keep it open in the foreground until it completes. Points may be purchased as in-app packages. Travel Points have no cash value, are non-transferable, and are not redeemable for cash.
-
-**Account Deletion.** Deleting your account (**Profile → Delete My Account**) permanently deletes your account, travel profile, all synced trips, and your Travel Points balance — this can't be undone, and any remaining Travel Points balance is forfeited.

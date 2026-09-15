@@ -12,18 +12,17 @@ title: Privacy Policy
 
 ---
 
-This Privacy Policy covers every app published by DataCraft Studio LLC — currently **fitr+** (with **travelr+** launching soon) — and applies automatically to any app we publish in the future. The **General** section below applies to all of our apps and to the shared account system. Each app then has its own section describing exactly what that app collects and how it works.
+This Privacy Policy covers every app published by DataCraft Studio LLC — currently **fitr+** — and applies automatically to any app we publish in the future. The **General** section below applies to all of our apps and to your account. Each app then has its own section describing exactly what that app collects and how it works.
 
 ---
 
 ## General — Account & All Apps
 
-**One account, shared across all our apps.** All of our apps require you to create a single DataCraft Studio account — used only for signing in, nothing else — via Firebase Authentication, a service operated by Google. That one account works across every current and future DataCraft Studio app; you never need a separate account per app.
+**Your account.** Our apps require you to create a DataCraft Studio account — used only for signing in, nothing else — via Firebase Authentication, a service operated by Google.
 
 - **What we collect for the account:** your email address and a password. Your password is managed entirely by Firebase Authentication — we never see or store it ourselves, Firebase Authentication handles that using industry-standard hashing. Your email address is also stored, associated with your account identifier, in our Cloud Firestore database (Google Cloud) — this is what lets us identify your account for support requests and account-level actions like deletion.
 - **Account actions:** every app offers the same core actions — Sign Up, Sign In, Sign Out, Forgot Password, and Change Password (from within Settings) — plus the ability to permanently delete your account and all data tied to it in every app.
 - **Deleting your account** removes your account itself and all app-specific data associated with it (see each app's section below for exactly what that includes), across every app you've used with that account. This can't be undone.
-- **Data isolation between apps:** each app's data is kept separate from every other app's data, even though it's tied to the same account. fitr+ has no access to travelr+'s data, and vice versa.
 
 ### Support Communications
 If you contact us for support (e.g., by email), we may receive your email address, name, and any information you choose to include in your message. We use this only to respond to your request and provide support — we don't share it with third parties or use it for marketing.
@@ -97,28 +96,3 @@ fitr+ is a fitness tracking app. fitr+ requires a DataCraft Studio account (see 
 | Apple Health (HealthKit) | Reads your daily steps and your resting/active energy, opt-in and read-only, to show progress and estimate calories burned | Nothing is sent to Apple; data is read on-device only | [Link](https://www.apple.com/legal/privacy/) |
 | Open Food Facts | Looks up a packaged food's name and nutrition from a scanned barcode | The barcode number and an app identifier only — no account or personal data | [Link](https://world.openfoodfacts.org/privacy) |
 | Apple In-App Purchase | Processes Energy Points and Membership payments | Payment/billing details (never seen by us); transaction record shared with our backend | [Link](https://www.apple.com/legal/privacy/) |
-
----
-
-## travelr+
-
-travelr+ is an AI-assisted trip planning app. Like fitr+, travelr+ requires a DataCraft Studio account (see General section above) — used to keep your Travel Points balance safe across devices and to sync your travel profile and trips.
-
-**Data tied to your account, stored in Cloud Firestore (Google Cloud):**
-
-- **Travel Points balance** — a points ledger used to pay for AI itinerary generation; server-managed, never directly editable by the app.
-- **Travel profile** — name, home airport/city, date of birth, and your travel preferences (pace, budget, travel style, who you usually travel with).
-- **Trips** — destinations, itineraries, activities, and notes for trips you create. **Photos you attach to a trip stay on your device only and are never synced or uploaded.**
-
-**Data stored only on your device:** trip photos, and app settings (theme, accessibility settings).
-
-**AI Features:** Trip generation and refinement use Google's Gemini model through our own backend (Firebase Cloud Functions) — you do not need, and the app does not ask for, your own Gemini API key. When you generate or refine a trip, your travel profile and prompt are sent from your device to our Cloud Function, which forwards them to Google's Gemini API using a key we manage, and returns the response to your device. **Our backend does not store or log your prompts or Gemini's responses** — the only thing recorded is which action you took, when, and whether it succeeded, tied to your account (this is also what your Travel Points balance is spent against). AI-generated itineraries may be inaccurate or outdated — always verify hours, prices, safety, road conditions, visa requirements, and bookings before you travel. Governed by [Google's Privacy Policy](https://policies.google.com/privacy).
-
-**Deleting your account:** available via **Profile → Delete My Account** — permanently deletes your account, travel profile, all synced trips, and your Travel Points balance. This can't be undone.
-
-| Service | Purpose | Data Sent | Their Privacy Policy |
-|---|---|---|---|
-| Firebase Authentication | Account sign-in | Email, password (handled by Firebase) | [Link](https://policies.google.com/privacy) |
-| Cloud Firestore | Storing your travel profile, trips, and Travel Points balance | Travel profile, trip content, points balance | [Link](https://policies.google.com/privacy) |
-| Cloud Functions (our backend) | Proxies trip generation/refinement requests to Gemini using our own key — not stored or logged | Travel profile + your prompt (in transit only) | [Link](https://policies.google.com/privacy) |
-| Google Gemini API | Generates trip itineraries and refinements | Travel profile + your prompt (via our backend) | [Link](https://policies.google.com/privacy) |
